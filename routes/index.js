@@ -6,6 +6,10 @@ router.get('/', function (req, res, next) {
   res.send('welcome to google addons demo 🙏');
 });
 
+function makeTitle(title) {
+  return title.trim().replace(' ', '_').toLowerCase();
+}
+
 router.post('/publish', async function (req, res, next) {
 
   let html = req.body.html;
@@ -18,7 +22,7 @@ router.post('/publish', async function (req, res, next) {
       message: 'invalid password'
     })
   }
-  let filename = uuidv4() + ".html"
+  let filename = makeTitle(title) + ".html"
   let appUrl = req.headers.host + "/doc/" + filename
   title = "<title>" + title + "</title>";
   let content = html.split('<head>')
