@@ -6,21 +6,12 @@ const path = require('path');
 const GoogleSheet = require('../model/GoogleSheet');
 
 router.get('/', async function (req, res, next) {
-
-
   let total = GoogleSheet.count({});
   let page = req.params.page || 0
-  let limit = 10;
+  let limit = 300;
   let docs = await GoogleSheet.find({}).sort({ createdAt: -1 }).skip(page * limit).limit(limit);
-
   // res.json(docs);
-
   res.render('index', { title: 'Published Documents', data: docs })
-
-
-
-
-
   // res.send('welcome to google addons demo 🙏');
 });
 
