@@ -46,7 +46,8 @@ router.post('/publish', async function (req, res, next) {
   if (!documentId) {
     return res.json({ success: false, publishUrl: null, message: 'missing documentId' })
   }
-  if (password !== "google-demo") {
+  let pass = process.env.PASSWORD || "google-demo";
+  if (password !== pass) {
     return res.json({ success: false, publishUrl: null, message: 'invalid password' })
   }
 

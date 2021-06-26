@@ -1,4 +1,3 @@
 module.exports = {
-  // mongoUri: "mongodb://localhost:27017/google",
-  mongoUri: process.env.DB,
+  mongoUri: process.env.DB || "mongodb://localhost:27017/google"
 }
