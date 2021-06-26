@@ -5,7 +5,13 @@ var path = require('path');
 var indexRouter = require('./routes/index');
 var cors = require('cors');
 var app = express();
+var mongoose = require("mongoose");
+var config = require("./config/config");
 
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
+app.locals.moment = require('moment')
 app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -27,6 +33,15 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
+mongoose.connect(config.mongoUri, { useNewUrlParser: true })
+  .then(() => {
+    console.log("connected to db")
+  }).catch((err) => {
+    console.log("error connecting database");
+    throw (err)
+  });
 
 // let port =  3000;
 // app.listen(port, () => {

@@ -2,4 +2,11 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  -for(var index in data)
+    p 
+      span(style="color:#aaa") Published on : 
+        span= moment(data[index].updatedAt).format('DD MMM yy')
+      h2 #{data[index].title}
+        a(style="margin:10px;font-size:12px;" href='https://#{data[index].publicUrl}' target="_blank") view
+        a(style="margin:10px;font-size:12px;" href='https://docs.google.com/document/d/#{data[index].documentId}/edit'  target="_blank") edit
+      hr  
