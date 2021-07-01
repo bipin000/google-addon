@@ -21,6 +21,23 @@ function makeTitle(title, documentId) {
 }
 
 
+router.get('/documentPublishedURL/:documentId', async function (req, res, next) {
+  let documentId = req.params.documentId;
+  let doc = await GoogleSheet.findOne({ documentId })
+  if (doc) {
+    return res.json({
+      status: true,
+      publicUrl: doc.publicUrl
+    })
+  } else {
+    return res.json({
+      status: false,
+      publicUrl: null
+    })
+  }
+
+});
+
 router.post('/publish', async function (req, res, next) {
 
   let html = req.body.html;
@@ -68,7 +85,7 @@ router.post('/publish', async function (req, res, next) {
         await GoogleSheet.create({ documentId, title, publicUrl: appUrl, fileName, userEmail })
       }
 
-      let _extraHtml = makeBodyHtml(lastUpdateDate, name, appUrl, profileUrl);
+      let _extraHtml = makeBodyHtml(lastUpdateDate, name, appUrl, "https://" + profileUrl);
       let _temp1 = newHtml.split("<body");
       let _temp2 = _temp1[1].split('>');
       let _temp3 = "<body " + _temp2[0] + ">";
@@ -97,7 +114,7 @@ router.post('/publish', async function (req, res, next) {
 function makeBodyHtml(lastUpdateDate, name, url, profileUrl) {
   return `<div id="toast" class="g-font">link copied</div>
 <div style="display: flex;justify-content: space-between;" class="g-font"><a href="https://ciitizen.com"> <img
-      src="../images/ciitizen.png" style="width: 50px;" /></a>
+      src="../images/ciitizen.png" style="width: 40px;" /></a>
   <div style="color:#aaa">Last updated : `+ lastUpdateDate + ` </div>
 </div>
 <div style="text-align: center;font-size:30px;margin-bottom:30px;" class="g-font"><a href="`+ profileUrl + `" style="color:#444">` + name + ` Notes</a></div>
