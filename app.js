@@ -35,20 +35,9 @@ app.use(function (err, req, res, next) {
 });
 
 
-// let port =  3000;
-// app.listen(port, () => {
-//   console.log("server started at " + port)
-// mongoose.connect(config.mongoUri, { useNewUrlParser: true })
-//   .then(() => {
-//     console.log("connected to db")
-//   }).catch((err) => {
-//     console.log("error connecting database");
-//     throw (err)
-//   });
-
-// })
-
-
+let port =  3000;
+app.listen(port, () => {
+  console.log("server started at " + port)
 mongoose.connect(config.mongoUri, { useNewUrlParser: true })
   .then(() => {
     console.log("connected to db")
@@ -56,6 +45,17 @@ mongoose.connect(config.mongoUri, { useNewUrlParser: true })
     console.log("error connecting database");
     throw (err)
   });
+
+})
+
+
+// mongoose.connect(config.mongoUri, { useNewUrlParser: true })
+//   .then(() => {
+//     console.log("connected to db")
+//   }).catch((err) => {
+//     console.log("error connecting database");
+//     throw (err)
+//   });
 
 
 module.exports = app;

@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  div(style="text-align:center;")
+    img(src="/images/ciitizen-logo.png" style="margin:20px auto;width:200px;")
+  h1= title
+  -for(var index in data)
+    a(href="/user/#{data[index].username}")
+      div( class="list-item")
+        div
+          img(src="{data[index].profilePic" style="width:100px;border-radius:100px;margin:20px;" )
+        div(style="margin:20px;") 
+          div 
+            h2(style="margin:10px;") #{data[index].name}
+          div(style="display:flex;") 
+            div(style="margin:10px;") 
+              span(class="b-label") Joined : 
+              span= moment(data[index].created).format('MMM yy')
+            div(style="margin:10px;") 
+              span(class="b-label") Documents : 
+              span #{data[index].documentCount}
+
+      //- img(src=data[index].profilePic )
+      //- span(style="color:#aaa") Published on : 
+      //-   span= moment(data[index].updatedAt).format('DD MMM yy')
+      //- h2 #{data[index].title}
+      //-   a(style="margin:10px;font-size:12px;" href='https://#{data[index].publicUrl}' target="_blank") view
+      //-   a(style="margin:10px;font-size:12px;" href='https://docs.google.com/document/d/#{data[index].documentId}/edit'  target="_blank") edit
+
+  

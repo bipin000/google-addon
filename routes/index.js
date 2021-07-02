@@ -4,21 +4,23 @@ const { v4: uuidv4 } = require('uuid');
 var fs = require("fs")
 const path = require('path');
 const GoogleSheet = require('../model/GoogleSheet');
+const User = require('../model/User');
 var moment = require("moment")
 
+
+
 router.get('/', async function (req, res, next) {
-  let total = GoogleSheet.count({});
+  let total = User.count({});
   let page = req.params.page || 0
   let limit = 300;
-  let docs = await GoogleSheet.find({}).sort({ createdAt: -1 }).skip(page * limit).limit(limit);
+  let users = await User.find({}).sort({ createdAt: -1 }).skip(page * limit).limit(limit);
+  console.log(users);
   // res.json(docs);
-  res.render('index', { title: 'Published Documents', data: docs })
+  res.render('user-list', { title: 'Profiles', data: users })
   // res.send('welcome to google addons demo 🙏');
 });
 
-function makeTitle(title, documentId) {
-  return title.trim().split(" ").join("_").toLowerCase() + "_" + documentId;
-}
+// https://dailybits.xyz/images/ciitizen.png
 
 
 router.get('/documentPublishedURL/:documentId', async function (req, res, next) {
@@ -60,6 +62,7 @@ router.post('/publish', async function (req, res, next) {
   if (password !== pass) {
     return res.json({ success: false, publishUrl: null, message: 'invalid password' })
   }
+  let user = { email: userEmail, name: req.body.name || '', gender: req.body.gender || '', profilePic: req.body.gender === "F" ? "https://dailybits.xyz/images/she.png" : "https://dailybits.xyz/images/he.png", description: req.body.description || '' }
 
   let fileName = makeTitle(title, documentId) + ".html"
   let appBaseUrl = req.headers.host + "/doc/"
@@ -76,6 +79,7 @@ router.post('/publish', async function (req, res, next) {
 
   if (req.body) {
     try {
+      let userInDb = await checkUser(user);
       let doc = await GoogleSheet.findOne({ documentId });
       if (doc) {
         fileName = doc.fileName == fileName ? doc.fileName : fileName;
@@ -93,6 +97,8 @@ router.post('/publish', async function (req, res, next) {
       _temp2.shift();
       newHtml = _temp1[0] + _temp3 + _extraHtml + _temp2.join(">");
       let fwrite = await fs.writeFileSync("./public/doc/" + fileName, newHtml)
+      if (!doc)
+        await updateDocumentCount(userInDb);
 
     } catch (error) {
       console.error(error)
@@ -110,6 +116,39 @@ router.post('/publish', async function (req, res, next) {
   })
 
 });
+
+router.get('/user/:username', async function (req, res, next) {
+  let username = req.params.username;
+  let user = await User.findOne({ username })
+  if (user) {
+    let docs = await GoogleSheet.find({ userEmail: user.email })
+    console.log("*****************docs.........",docs,user.email);
+    res.render('user-profile', { title: 'Users', user: user, data: docs })
+  }
+
+});
+
+
+async function checkUser(user) {
+  let _user = await checkIfUserExists(user.email)
+  if (!_user) {
+    _user = await createNewUser(user)
+  }
+  return _user;
+}
+
+async function checkIfUserExists(email) {
+  return await User.findOne({ email });
+}
+
+async function createNewUser(user) {
+  user.username = generateUserName(user.name)
+  return await User.create(user);
+}
+
+function makeTitle(title, documentId) {
+  return title.trim().split(" ").join("_").toLowerCase() + "_" + documentId;
+}
 
 
 function makeBodyHtml(lastUpdateDate, name, url, profileUrl) {
@@ -183,6 +222,7 @@ function makeCustomStyle() {
   </style>
   `;
 }
+
 function makeCustomJS() {
   return `  <script>
   function copyToClipboard(text) {
@@ -198,6 +238,14 @@ function makeCustomJS() {
     }, 500)
   }
 </script>`;
+}
+
+function generateUserName(name) {
+  return (name.split(" ").join("") + Math.floor(Math.random() * 100000)).toLowerCase()
+}
+
+async function updateDocumentCount(user) {
+  await User.findByIdAndUpdate({ _id: user._id }, { $set: { documentCount: user.documentCount + 1 } });
 }
 module.exports = router;
 
