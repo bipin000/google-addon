@@ -90,7 +90,7 @@ router.post('/publish', async function (req, res, next) {
         await GoogleSheet.create({ documentId, title, publicUrl: appUrl, fileName, userEmail })
       }
 
-      let _extraHtml = makeBodyHtml(lastUpdateDate, name, appUrl, req.protocol + profileUrl);
+      let _extraHtml = makeBodyHtml(lastUpdateDate, name, appUrl, "/user/" + userInDb.username);
       let _temp1 = newHtml.split("<body");
       let _temp2 = _temp1[1].split('>');
       let _temp3 = "<body " + _temp2[0] + ">";
@@ -122,7 +122,7 @@ router.get('/user/:username', async function (req, res, next) {
   let user = await User.findOne({ username })
   if (user) {
     let docs = await GoogleSheet.find({ userEmail: user.email })
-    console.log("*****************docs.........",docs,user.email);
+    console.log("*****************docs.........", docs, user.email);
     res.render('user-profile', { title: 'Users', user: user, data: docs })
   }
 
