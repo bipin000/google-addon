@@ -20,6 +20,26 @@ router.get('/', async function (req, res, next) {
   // res.send('welcome to google addons demo 🙏');
 });
 
+
+router.get('/api/users', async function (req, res, next) {
+  try {
+
+    let total = await User.count({});
+    console.log("....api user....", total);
+    let page = req.params.page || 0
+    let limit = 300;
+    let users = await User.find({});
+    console.log(users);
+    return res.json({
+      total,
+      users
+    });
+  } catch (error) {
+    return res.json(JSON.stringify(error))
+  }
+});
+
+
 // https://dailybits.xyz/images/ciitizen.png
 
 

@@ -1,0 +1,712 @@
+[
+  {
+    "profilePic": "https://dailybits.xyz/images/tania.png",
+    "name": "Tania Sethi",
+    "age": 52,
+    "gender": "Female",
+    "address": "8790 Endless Ocean Way Columbia, MD 21045",
+    "email": "tania@ciitizen.com",
+    "phone": "+1 410-599-1529",
+    "diseases": "Breast Cancer",
+    "dob": "Feb 19, 1969",
+    "medication": [
+      {
+        "date": "June 16,2020",
+        "items": [
+          {
+            "medication": "Famotidine",
+            "dose": "40mg Tablet, Oral"
+          }
+        ]
+      },
+      {
+        "date": "Oct 31,2019",
+        "items": [
+          {
+            "medication": "Prochlorperazine Maleate",
+            "dose": "10mg Tablet, Oral"
+          },
+          {
+            "medication": "Cholecalciferol (Vitamin D3)",
+            "dose": "10mg Tablet, Oral"
+          }
+        ]
+      },
+      {
+        "date": "July 17,2019",
+        "items": [
+          {
+            "medication": "Dose-dense AC Followed by Dose-Dense Pa...",
+            "dose": ""
+          }
+        ]
+      },
+      {
+        "date": "Dec 25,2018",
+        "items": [
+          {
+            "medication": "Venlafaxine ER 75mg Capsule",
+            "dose": ""
+          },
+          {
+            "medication": "Naproxen Sodium",
+            "dose": "220mg Tablet, Oral"
+          }
+        ]
+      }
+    ],
+    "labs": [
+      {
+        "labName": "Unknown lab name, 4/15/20",
+        "labData": [
+          "* : HR+/HER2+ (Breast Cancer), HR+/HER2- (Breast Cancer), HR+/HER2+ (Breast Cancer)"
+        ]
+      },
+      {
+        "labName": "Unknown lab name, 4/15/20",
+        "labData": [
+          "* Negative for Protein Expression: HER2 (ERBB2) * Positive for Protein Expression: PR (PGR), HER2 (ERBB2), ER  (ESR1) * Equivocal Protein Expression: HER2 (ERBB2) * Alteration Present: MSH3"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Marilyn Harms",
+    "email": "Harms@ciitizen.com",
+    "address": "8790 Endless Ocean Way Columbia, MD 21045",
+    "phone": "+1 410-599-1529",
+    "dob": "Mar 13, 1967",
+    "profilePic": "https://dailybits.xyz/images/phe.png",
+    "age": 54,
+    "gender": "Male",
+    "diseases": "Cholangiocarcinoma",
+    "medication": [
+      {
+        "date": "June 16,2020",
+        "items": [
+          {
+            "medication": "Famotidine",
+            "dose": "40mg Tablet, Oral"
+          }
+        ]
+      },
+      {
+        "date": "Oct 31,2019",
+        "items": [
+          {
+            "medication": "Prochlorperazine Maleate",
+            "dose": "10mg Tablet, Oral"
+          },
+          {
+            "medication": "Cholecalciferol (Vitamin D3)",
+            "dose": "10mg Tablet, Oral"
+          }
+        ]
+      },
+      {
+        "date": "July 17,2019",
+        "items": [
+          {
+            "medication": "Dose-dense AC Followed by Dose-Dense Pa...",
+            "dose": ""
+          }
+        ]
+      },
+      {
+        "date": "Dec 25,2018",
+        "items": [
+          {
+            "medication": "Venlafaxine ER 75mg Capsule",
+            "dose": ""
+          },
+          {
+            "medication": "Naproxen Sodium",
+            "dose": "220mg Tablet, Oral"
+          }
+        ]
+      }
+    ],
+    "labs": [
+      {
+        "labName": "Unknown lab name, 4/15/20",
+        "labData": [
+          "* : HR+/HER2+ (Breast Cancer), HR+/HER2- (Breast Cancer), HR+/HER2+ (Breast Cancer)"
+        ]
+      },
+      {
+        "labName": "Unknown lab name, 4/15/20",
+        "labData": [
+          "* Negative for Protein Expression: HER2 (ERBB2) * Positive for Protein Expression: PR (PGR), HER2 (ERBB2), ER  (ESR1) * Equivocal Protein Expression: HER2 (ERBB2) * Alteration Present: MSH3"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Sandra Mitch",
+    "email": "sandra@ciitizen.com",
+    "address": "8790 Endless Ocean Way Columbia, MD 21045",
+    "phone": "+1 410-599-1529",
+    "dob": "Sep 1, 1972",
+    "profilePic": "https://dailybits.xyz/images/sandra.jpeg",
+    "age": 49,
+    "gender": "Female",
+    "diseases": "Cholangiocarcinoma",
+    "medication": [
+      {
+        "date": "June 16,2020",
+        "items": [
+          {
+            "medication": "Famotidine",
+            "dose": "40mg Tablet, Oral"
+          }
+        ]
+      },
+      {
+        "date": "Oct 31,2019",
+        "items": [
+          {
+            "medication": "Prochlorperazine Maleate",
+            "dose": "10mg Tablet, Oral"
+          },
+          {
+            "medication": "Cholecalciferol (Vitamin D3)",
+            "dose": "10mg Tablet, Oral"
+          }
+        ]
+      },
+      {
+        "date": "July 17,2019",
+        "items": [
+          {
+            "medication": "Dose-dense AC Followed by Dose-Dense Pa...",
+            "dose": ""
+          }
+        ]
+      },
+      {
+        "date": "Dec 25,2018",
+        "items": [
+          {
+            "medication": "Venlafaxine ER 75mg Capsule",
+            "dose": ""
+          },
+          {
+            "medication": "Naproxen Sodium",
+            "dose": "220mg Tablet, Oral"
+          }
+        ]
+      }
+    ],
+    "labs": [
+      {
+        "labName": "Unknown lab name, 4/15/20",
+        "labData": [
+          "* : HR+/HER2+ (Breast Cancer), HR+/HER2- (Breast Cancer), HR+/HER2+ (Breast Cancer)"
+        ]
+      },
+      {
+        "labName": "Unknown lab name, 4/15/20",
+        "labData": [
+          "* Negative for Protein Expression: HER2 (ERBB2) * Positive for Protein Expression: PR (PGR), HER2 (ERBB2), ER  (ESR1) * Equivocal Protein Expression: HER2 (ERBB2) * Alteration Present: MSH3"
+        ]
+      }
+    ]
+  },
+  {
+    "profilePic": "https://dailybits.xyz/images/pshe.png",
+    "name": "Gina Offutt",
+    "email": "offutt@ciitizen.com",
+    "address": "8790 Endless Ocean Way Columbia, MD 21045",
+    "phone": "+1 410-599-1529",
+    "dob": "July 23, 1987",
+    "age": 34,
+    "gender": "Female",
+    "diseases": "Breast Cancer",
+    "medication": [
+      {
+        "date": "June 16,2020",
+        "items": [
+          {
+            "medication": "Famotidine",
+            "dose": "40mg Tablet, Oral"
+          }
+        ]
+      },
+      {
+        "date": "Oct 31,2019",
+        "items": [
+          {
+            "medication": "Prochlorperazine Maleate",
+            "dose": "10mg Tablet, Oral"
+          },
+          {
+            "medication": "Cholecalciferol (Vitamin D3)",
+            "dose": "10mg Tablet, Oral"
+          }
+        ]
+      },
+      {
+        "date": "July 17,2019",
+        "items": [
+          {
+            "medication": "Dose-dense AC Followed by Dose-Dense Pa...",
+            "dose": ""
+          }
+        ]
+      },
+      {
+        "date": "Dec 25,2018",
+        "items": [
+          {
+            "medication": "Venlafaxine ER 75mg Capsule",
+            "dose": ""
+          },
+          {
+            "medication": "Naproxen Sodium",
+            "dose": "220mg Tablet, Oral"
+          }
+        ]
+      }
+    ],
+    "labs": [
+      {
+        "labName": "Unknown lab name, 4/15/20",
+        "labData": [
+          "* : HR+/HER2+ (Breast Cancer), HR+/HER2- (Breast Cancer), HR+/HER2+ (Breast Cancer)"
+        ]
+      },
+      {
+        "labName": "Unknown lab name, 4/15/20",
+        "labData": [
+          "* Negative for Protein Expression: HER2 (ERBB2) * Positive for Protein Expression: PR (PGR), HER2 (ERBB2), ER  (ESR1) * Equivocal Protein Expression: HER2 (ERBB2) * Alteration Present: MSH3"
+        ]
+      }
+    ]
+  },
+  {
+    "profilePic": "https://dailybits.xyz/images/pshe.png",
+    "name": "Robert McMillan",
+    "email": "tania@McMillan.com",
+    "address": "8790 Endless Ocean Way Columbia, MD 21045",
+    "phone": "+1 410-599-1529",
+    "dob": "March 2, 1974",
+    "age": 47,
+    "gender": "Female",
+    "diseases": "Breast Cancer",
+    "medication": [
+      {
+        "date": "June 16,2020",
+        "items": [
+          {
+            "medication": "Famotidine",
+            "dose": "40mg Tablet, Oral"
+          }
+        ]
+      },
+      {
+        "date": "Oct 31,2019",
+        "items": [
+          {
+            "medication": "Prochlorperazine Maleate",
+            "dose": "10mg Tablet, Oral"
+          },
+          {
+            "medication": "Cholecalciferol (Vitamin D3)",
+            "dose": "10mg Tablet, Oral"
+          }
+        ]
+      },
+      {
+        "date": "July 17,2019",
+        "items": [
+          {
+            "medication": "Dose-dense AC Followed by Dose-Dense Pa...",
+            "dose": ""
+          }
+        ]
+      },
+      {
+        "date": "Dec 25,2018",
+        "items": [
+          {
+            "medication": "Venlafaxine ER 75mg Capsule",
+            "dose": ""
+          },
+          {
+            "medication": "Naproxen Sodium",
+            "dose": "220mg Tablet, Oral"
+          }
+        ]
+      }
+    ],
+    "labs": [
+      {
+        "labName": "Unknown lab name, 4/15/20",
+        "labData": [
+          "* : HR+/HER2+ (Breast Cancer), HR+/HER2- (Breast Cancer), HR+/HER2+ (Breast Cancer)"
+        ]
+      },
+      {
+        "labName": "Unknown lab name, 4/15/20",
+        "labData": [
+          "* Negative for Protein Expression: HER2 (ERBB2) * Positive for Protein Expression: PR (PGR), HER2 (ERBB2), ER  (ESR1) * Equivocal Protein Expression: HER2 (ERBB2) * Alteration Present: MSH3"
+        ]
+      }
+    ]
+  },
+  {
+    "profilePic": "https://dailybits.xyz/images/pshe.png",
+    "name": "Brenda Renzulli",
+    "email": "renzulli@ciitizen.com",
+    "address": "8790 Endless Ocean Way Columbia, MD 21045",
+    "phone": "+1 410-599-1529",
+    "dob": "Jan 4, 1979",
+    "age": 42,
+    "gender": "Female",
+    "diseases": "Breast Cancer",
+    "medication": [
+      {
+        "date": "June 16,2020",
+        "items": [
+          {
+            "medication": "Famotidine",
+            "dose": "40mg Tablet, Oral"
+          }
+        ]
+      },
+      {
+        "date": "Oct 31,2019",
+        "items": [
+          {
+            "medication": "Prochlorperazine Maleate",
+            "dose": "10mg Tablet, Oral"
+          },
+          {
+            "medication": "Cholecalciferol (Vitamin D3)",
+            "dose": "10mg Tablet, Oral"
+          }
+        ]
+      },
+      {
+        "date": "July 17,2019",
+        "items": [
+          {
+            "medication": "Dose-dense AC Followed by Dose-Dense Pa...",
+            "dose": ""
+          }
+        ]
+      },
+      {
+        "date": "Dec 25,2018",
+        "items": [
+          {
+            "medication": "Venlafaxine ER 75mg Capsule",
+            "dose": ""
+          },
+          {
+            "medication": "Naproxen Sodium",
+            "dose": "220mg Tablet, Oral"
+          }
+        ]
+      }
+    ],
+    "labs": [
+      {
+        "labName": "Unknown lab name, 4/15/20",
+        "labData": [
+          "* : HR+/HER2+ (Breast Cancer), HR+/HER2- (Breast Cancer), HR+/HER2+ (Breast Cancer)"
+        ]
+      },
+      {
+        "labName": "Unknown lab name, 4/15/20",
+        "labData": [
+          "* Negative for Protein Expression: HER2 (ERBB2) * Positive for Protein Expression: PR (PGR), HER2 (ERBB2), ER  (ESR1) * Equivocal Protein Expression: HER2 (ERBB2) * Alteration Present: MSH3"
+        ]
+      }
+    ]
+  },
+  {
+    "profilePic": "https://dailybits.xyz/images/pshe.png",
+    "name": "Rita Lusen",
+    "email": "Lusen@ciitizen.com",
+    "address": "8790 Endless Ocean Way Columbia, MD 21045",
+    "phone": "+1 410-599-1529",
+    "dob": "Aug 23, 1989",
+    "age": 32,
+    "gender": "Female",
+    "diseases": "Breast Cancer",
+    "medication": [
+      {
+        "date": "June 16,2020",
+        "items": [
+          {
+            "medication": "Famotidine",
+            "dose": "40mg Tablet, Oral"
+          }
+        ]
+      },
+      {
+        "date": "Oct 31,2019",
+        "items": [
+          {
+            "medication": "Prochlorperazine Maleate",
+            "dose": "10mg Tablet, Oral"
+          },
+          {
+            "medication": "Cholecalciferol (Vitamin D3)",
+            "dose": "10mg Tablet, Oral"
+          }
+        ]
+      },
+      {
+        "date": "July 17,2019",
+        "items": [
+          {
+            "medication": "Dose-dense AC Followed by Dose-Dense Pa...",
+            "dose": ""
+          }
+        ]
+      },
+      {
+        "date": "Dec 25,2018",
+        "items": [
+          {
+            "medication": "Venlafaxine ER 75mg Capsule",
+            "dose": ""
+          },
+          {
+            "medication": "Naproxen Sodium",
+            "dose": "220mg Tablet, Oral"
+          }
+        ]
+      }
+    ],
+    "labs": [
+      {
+        "labName": "Unknown lab name, 4/15/20",
+        "labData": [
+          "* : HR+/HER2+ (Breast Cancer), HR+/HER2- (Breast Cancer), HR+/HER2+ (Breast Cancer)"
+        ]
+      },
+      {
+        "labName": "Unknown lab name, 4/15/20",
+        "labData": [
+          "* Negative for Protein Expression: HER2 (ERBB2) * Positive for Protein Expression: PR (PGR), HER2 (ERBB2), ER  (ESR1) * Equivocal Protein Expression: HER2 (ERBB2) * Alteration Present: MSH3"
+        ]
+      }
+    ]
+  },
+  {
+    "profilePic": "https://dailybits.xyz/images/phe.png",
+    "name": "Brian Cassidy",
+    "email": "Cassidy@ciitizen.com",
+    "address": "8790 Endless Ocean Way Columbia, MD 21045",
+    "phone": "+1 410-599-1529",
+    "dob": "Sep 2, 1971",
+    "age": 50,
+    "gender": "Male",
+    "diseases": "Hodgkin Lymphoma",
+    "medication": [
+      {
+        "date": "June 16,2020",
+        "items": [
+          {
+            "medication": "Famotidine",
+            "dose": "40mg Tablet, Oral"
+          }
+        ]
+      },
+      {
+        "date": "Oct 31,2019",
+        "items": [
+          {
+            "medication": "Prochlorperazine Maleate",
+            "dose": "10mg Tablet, Oral"
+          },
+          {
+            "medication": "Cholecalciferol (Vitamin D3)",
+            "dose": "10mg Tablet, Oral"
+          }
+        ]
+      },
+      {
+        "date": "July 17,2019",
+        "items": [
+          {
+            "medication": "Dose-dense AC Followed by Dose-Dense Pa...",
+            "dose": ""
+          }
+        ]
+      },
+      {
+        "date": "Dec 25,2018",
+        "items": [
+          {
+            "medication": "Venlafaxine ER 75mg Capsule",
+            "dose": ""
+          },
+          {
+            "medication": "Naproxen Sodium",
+            "dose": "220mg Tablet, Oral"
+          }
+        ]
+      }
+    ],
+    "labs": [
+      {
+        "labName": "Unknown lab name, 4/15/20",
+        "labData": [
+          "* : HR+/HER2+ (Breast Cancer), HR+/HER2- (Breast Cancer), HR+/HER2+ (Breast Cancer)"
+        ]
+      },
+      {
+        "labName": "Unknown lab name, 4/15/20",
+        "labData": [
+          "* Negative for Protein Expression: HER2 (ERBB2) * Positive for Protein Expression: PR (PGR), HER2 (ERBB2), ER  (ESR1) * Equivocal Protein Expression: HER2 (ERBB2) * Alteration Present: MSH3"
+        ]
+      }
+    ]
+  },
+  {
+    "profilePic": "https://dailybits.xyz/images/pshe.png",
+    "name": "Gretchen Riccardi",
+    "email": "riccardi@ciitizen.com",
+    "address": "8790 Endless Ocean Way Columbia, MD 21045",
+    "phone": "+1 410-599-1529",
+    "dob": "Jan 15, 1976",
+    "age": 45,
+    "gender": "Female",
+    "diseases": "Breast Cancer",
+    "medication": [
+      {
+        "date": "June 16,2020",
+        "items": [
+          {
+            "medication": "Famotidine",
+            "dose": "40mg Tablet, Oral"
+          }
+        ]
+      },
+      {
+        "date": "Oct 31,2019",
+        "items": [
+          {
+            "medication": "Prochlorperazine Maleate",
+            "dose": "10mg Tablet, Oral"
+          },
+          {
+            "medication": "Cholecalciferol (Vitamin D3)",
+            "dose": "10mg Tablet, Oral"
+          }
+        ]
+      },
+      {
+        "date": "July 17,2019",
+        "items": [
+          {
+            "medication": "Dose-dense AC Followed by Dose-Dense Pa...",
+            "dose": ""
+          }
+        ]
+      },
+      {
+        "date": "Dec 25,2018",
+        "items": [
+          {
+            "medication": "Venlafaxine ER 75mg Capsule",
+            "dose": ""
+          },
+          {
+            "medication": "Naproxen Sodium",
+            "dose": "220mg Tablet, Oral"
+          }
+        ]
+      }
+    ],
+    "labs": [
+      {
+        "labName": "Unknown lab name, 4/15/20",
+        "labData": [
+          "* : HR+/HER2+ (Breast Cancer), HR+/HER2- (Breast Cancer), HR+/HER2+ (Breast Cancer)"
+        ]
+      },
+      {
+        "labName": "Unknown lab name, 4/15/20",
+        "labData": [
+          "* Negative for Protein Expression: HER2 (ERBB2) * Positive for Protein Expression: PR (PGR), HER2 (ERBB2), ER  (ESR1) * Equivocal Protein Expression: HER2 (ERBB2) * Alteration Present: MSH3"
+        ]
+      }
+    ]
+  },
+  {
+    "profilePic": "https://dailybits.xyz/images/phe.png",
+    "name": "Chad Kimbler",
+    "email": "kimbler@ciitizen.com",
+    "address": "8790 Endless Ocean Way Columbia, MD 21045",
+    "phone": "+1 410-599-1529",
+    "dob": "May 07, 1977",
+    "age": 44,
+    "gender": "Male",
+    "diseases": "Uveal Melanoma",
+    "medication": [
+      {
+        "date": "June 16,2020",
+        "items": [
+          {
+            "medication": "Famotidine",
+            "dose": "40mg Tablet, Oral"
+          }
+        ]
+      },
+      {
+        "date": "Oct 31,2019",
+        "items": [
+          {
+            "medication": "Prochlorperazine Maleate",
+            "dose": "10mg Tablet, Oral"
+          },
+          {
+            "medication": "Cholecalciferol (Vitamin D3)",
+            "dose": "10mg Tablet, Oral"
+          }
+        ]
+      },
+      {
+        "date": "July 17,2019",
+        "items": [
+          {
+            "medication": "Dose-dense AC Followed by Dose-Dense Pa...",
+            "dose": ""
+          }
+        ]
+      },
+      {
+        "date": "Dec 25,2018",
+        "items": [
+          {
+            "medication": "Venlafaxine ER 75mg Capsule",
+            "dose": ""
+          },
+          {
+            "medication": "Naproxen Sodium",
+            "dose": "220mg Tablet, Oral"
+          }
+        ]
+      }
+    ],
+    "labs": [
+      {
+        "labName": "Unknown lab name, 4/15/20",
+        "labData": [
+          "* : HR+/HER2+ (Breast Cancer), HR+/HER2- (Breast Cancer), HR+/HER2+ (Breast Cancer)"
+        ]
+      },
+      {
+        "labName": "Unknown lab name, 4/15/20",
+        "labData": [
+          "* Negative for Protein Expression: HER2 (ERBB2) * Positive for Protein Expression: PR (PGR), HER2 (ERBB2), ER  (ESR1) * Equivocal Protein Expression: HER2 (ERBB2) * Alteration Present: MSH3"
+        ]
+      }
+    ]
+  }
+]
