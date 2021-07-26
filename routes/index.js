@@ -42,6 +42,21 @@ router.get('/api/users', async function (req, res, next) {
   }
 });
 
+router.get('/partner/:pid', async function (req, res, next) {
+  try {
+
+    let partner = await Partner.findOne({ partnerId: req.params.pid });
+    console.log(partner);
+    if (partner)
+      res.render('partner', { partner })
+    else
+      res.render('error', 'invalid partner')
+
+  } catch (error) {
+    return res.json(JSON.stringify(error))
+  }
+});
+
 
 router.get('/api/partner/:email', async function (req, res, next) {
   try {
@@ -64,14 +79,45 @@ router.post('/api/partner', async function (req, res, next) {
 
     console.log("..update partner....");
     console.log(req.body);
-    // let user = await Partner.findOne({ email: req.params.email });
-    // let offers = await Offer.find({ partnerId: user.partnerId });
+    let bd = req.body.data;
 
-    // // console.log(offers);
-    // let ud = Object.assign(user.toObject(), { offers: offers });
+    // http://localhost:3001/partner/1AQlR1uoh1IndtEd9e2zpzXB5I1JDSY_y
+    // "email": getUser(),
+    let user = await Partner.findOne({ email: bd.email });
+    let partnerId;
+    if (!user) {
+      partnerId = Math.random().toString();
+    } else {
+      partnerId = user.partnerId;
+    }
 
-    // console.log(ud);
-    return res.json({})
+    let toSave = {
+      partnerId: bd[1][1],
+      name: bd[2][1],
+      email: bd.email,
+      about: bd[3][1],
+      category: bd[4][1],
+      address: bd[6][1],
+      city: bd[1][7],
+      state: bd[8][1],
+      profilePic: bd[9][1],
+      partnerEmail: bd[12][1],
+      partnerName: bd[11][1],
+      adminEmail: "",
+      adminName: "",
+      locationCoordinates: bd[26][1],
+      orgBio: "",
+      orgCoverPhoto: "",
+      partnerContactNo: "",
+      templateType: "",
+      version: "",
+      websiteLink: "",
+      primaryAdmin: "",
+
+    }
+
+    let pat = await Partner.updateOne({ partnerId: partnerId }, { $set: toSave }, { upsert: true });
+    return res.json(pat)
   } catch (error) {
     return res.json(JSON.stringify(error))
   }

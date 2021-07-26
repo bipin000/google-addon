@@ -4,14 +4,16 @@ html {
 }
 
 body {
-  padding: 50px;
+  /* padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-weight: 800;
   min-height: 80vh;
   max-width: 700px;
   margin: 0 auto;
   background-color: #fff;
   font-family: 'Roboto', sans-serif;
-}
+  */
+} 
 
 a {
   color: #000;
@@ -46,4 +48,5 @@ a {
 .back{
   position: absolute;
   top:5px;
+  z-index: 9005;
 }

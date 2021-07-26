@@ -43,35 +43,35 @@ app.use(function (err, req, res, next) {
 });
 
 
-// let port = 3001;
-// app.listen(port, () => {
-//   console.log("server started at " + port)
-//   mongoose.connect(config.mongoUri, { useNewUrlParser: true })
-//     .then(() => {
-//       console.log("connected to db")
-//       var seed = require("./seed/seedUsers");
-//       seed.seedUsers();
-//        seed.seedPartner();
-//        seed.seedOffer();
-//     }).catch((err) => {
-//       console.log("error connecting database");
-//       throw (err)
-//     });
+let port = 3001;
+app.listen(port, () => {
+  console.log("server started at " + port)
+  mongoose.connect(config.mongoUri, { useNewUrlParser: true })
+    .then(() => {
+      console.log("connected to db")
+      var seed = require("./seed/seedUsers");
+      seed.seedUsers();
+       seed.seedPartner();
+       seed.seedOffer();
+    }).catch((err) => {
+      console.log("error connecting database");
+      throw (err)
+    });
 
-// })
+})
 
-mongoose.connect(config.mongoUri, { useNewUrlParser: true })
-  .then(() => {
-    console.log("connected to db")
-    var seed = require("./seed/seedUsers");
-    seed.seedUsers();
-    seed.seedPartner();
-    seed.seedOffer();
+// mongoose.connect(config.mongoUri, { useNewUrlParser: true })
+//   .then(() => {
+//     console.log("connected to db")
+//     var seed = require("./seed/seedUsers");
+//     seed.seedUsers();
+//     seed.seedPartner();
+//     seed.seedOffer();
 
-  }).catch((err) => {
-    console.log("error connecting database");
-    throw (err)
-  });
+//   }).catch((err) => {
+//     console.log("error connecting database");
+//     throw (err)
+//   });
 
 
 module.exports = app;

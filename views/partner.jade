@@ -1,0 +1,73 @@
+extends layout
+
+block content
+  div(class="back") 
+    a(href='/') 
+      img(src="/images/icons8-home.svg" style="height:30px")
+  .card
+    img.card-img-top(src=partner.orgCoverPhoto )
+    .card-body
+      h5.card-title=partner.name
+      p.card-text=partner.about  
+      p.card-text=partner.category    
+      p.card-text=partner.address
+      //- p.card-text=partner
+      p.card-text=partner.city
+      p.card-text=partner.websiteLink
+      p.card-text=partner.state
+      p.card-text=partner.name
+      p.card-text=partner.locationCoordinates
+      p.card-text=partner.orgBio
+      p.card-text=partner.orgCoverPhoto
+      p.card-text=partner.partnerContactNo
+      p.card-text=partner.partnerEmail
+      p.card-text=partner.profilePic
+
+
+  //-     img(src=user.profilePic)
+  //-     //- img(src="http://localhost:3000/images/she.png" )
+  //-   div(style="display:flex;flex-direction: column;justify-content: space-between;flex: 1;") 
+  //-     h2(style="margin:10px;") 
+  //-       span(class="b-label") #{user.name}
+  //-     div(style="display:flex;justify-content:space-between;") 
+  //-       div(style="margin:10px;") 
+  //-         span(class="b-label") Joined : 
+  //-         span= moment(user.created).format('MMM yy')
+  //-       div(style="margin:10px;") 
+  //-         span(class="b-label") Documents : 
+  //-         span #{user.documentCount}
+
+  //- //- div= user
+  //- h2 Notes
+  //- -for(var index in data)
+  //-   div(class="list-item") 
+  //-     div
+  //-     div
+  //-       div(style="color:#aaa") 
+  //-         span(class="b-label") Published on : 
+  //-         span= moment(data[index].updatedAt).format('DD MMM yy')
+  //-       h3 #{data[index].title}
+  //-         a(style="margin:10px;font-size:12px;" href='https://#{data[index].publicUrl}' target="_blank") view
+  //-         a(style="margin:10px;font-size:12px;" href='https://docs.google.com/document/d/#{data[index].documentId}/edit'  target="_blank") edit
+
+
+//- a(href="/user/#{data[index].username}")
+//-   div( class="list-item")
+//-     div
+//-       img(src="http://localhost:3000/images/she.png" style="width:100px;border-radius:100px;margin:20px;" )
+//-     div(style="margin:20px;") 
+//-       div 
+//-         h2(style="margin:10px;") #{data[index].name}
+//-       div(style="display:flex;") 
+//-         div(style="margin:10px;") Joined : 
+//-           span= moment(data[index].created).format('MMM yy')
+//-         div(style="margin:10px;") Documents : #{data[index].documentCount}
+
+//- img(src=data[index].profilePic )
+//- span(style="color:#aaa") Published on : 
+//-   span= moment(data[index].updatedAt).format('DD MMM yy')
+//- h2 #{data[index].title}
+//-   a(style="margin:10px;font-size:12px;" href='https://#{data[index].publicUrl}' target="_blank") view
+//-   a(style="margin:10px;font-size:12px;" href='https://docs.google.com/document/d/#{data[index].documentId}/edit'  target="_blank") edit
+
+
