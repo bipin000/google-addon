@@ -149,6 +149,7 @@ router.get('/user/:username', async function (req, res, next) {
 });
 
 
+
 async function checkUser(user) {
   let _user = await checkIfUserExists(user.email)
   if (!_user) {
