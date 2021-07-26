@@ -1,0 +1,134 @@
+[
+  {
+    "version": "0.0.6",
+    "type_of_offer": "Registry",
+    "partnerId": "1AQlR1uoh1IndtEd9e2zpzXB5I1JDSY_y",
+    "choose_survey": {
+      "title*_(20_words_max)": "Join the BCO Registry!",
+      "short_description_(140_words_max)": "Help advance our understanding of Breast Cancer by part...",
+      "additional_details_(250_words_max)": "Ciitizen is teaming up with the F*ck Cancer team to offer free patient navigation services. The CareLine program is availible to those with a diagnosis of cancer or be a caregier of someone diagnosed with Cancer. How do patient navigators help? By helping you understand medical paperwork, locate support, find second opinions, understand fertility options, identify financial and insurance resources and SO MUCH MORE. Cancer is hard. The F*ck Cancer team are here to make it a little bit easier.",
+      "check_for_eligibility?": false,
+      "eligibility_details": "",
+      "header_image_(url)": "https://base-gl.s3.amazonaws.com/freessttJn/thumb/90a8e15e-d476-40d9-bccd-a6d51513630a.png",
+      "select_tags_to_describe_offer_(upto_5)": "F*CK Cancer, offer"
+    },
+    "publicLink": "1hpkg0uBlEgEI3IzdSR5UMhHA08M9v2T8",
+    "contact_information": {
+      "name": "",
+      "email": "",
+      "phone_number": "",
+      "website_link": "",
+      "offer_page_link_(updated_after_offer_published)": ""
+    }
+  },
+  {
+    "version": "0.0.6",
+    "type_of_offer": "Second Opinion",
+    "partnerId": "1AQlR1uoh1IndtEd9e2zpzXB5I1JDSY_y",
+    "choose_survey": {
+      "title*_(20_words_max)": "Free Second Opinion on your Treatment",
+      "short_description_(140_words_max)": "You qualify for a compensated study we are running to b...",
+      "additional_details_(250_words_max)": "Ciitizen is teaming up with the F*ck Cancer team to offer free patient navigation services. The CareLine program is availible to those with a diagnosis of cancer or be a caregier of someone diagnosed with Cancer. How do patient navigators help? By helping you understand medical paperwork, locate support, find second opinions, understand fertility options, identify financial and insurance resources and SO MUCH MORE. Cancer is hard. The F*ck Cancer team are here to make it a little bit easier.",
+      "check_for_eligibility?": false,
+      "eligibility_details": "",
+      "header_image_(url)": "https://base-gl.s3.amazonaws.com/freessttJn/thumb/90a8e15e-d476-40d9-bccd-a6d51513630a.png",
+      "select_tags_to_describe_offer_(upto_5)": "F*CK Cancer, offer"
+    },
+    "publicLink": "1hpkg0uBlEgEI3IzdSR5UMhHA08M9v2T8",
+    "contact_information": {
+      "name": "",
+      "email": "",
+      "phone_number": "",
+      "website_link": "",
+      "offer_page_link_(updated_after_offer_published)": ""
+    }
+  },
+  {
+    "version": "0.0.6",
+    "type_of_offer": "Sign-up",
+    "partnerId": "1AQlR1uoh1IndtEd9e2zpzXB5I1JDSY_y",
+    "choose_survey": {
+      "title*_(20_words_max)": "No Cost Patient Navigation for those currently in treatment",
+      "short_description_(140_words_max)": "Ciitizen is teaming up with the F*ck Cancer team to offer free patient navigation services. The CareLine program is availible to those with a diagnosis of cancer or be a caregier of someone diagnosed with Cancer. How do patient navigators help? By helping you understand medical paperwork, locate support, find second opinions, understand fertility options, identify financial and insurance resources and SO MUCH MORE. Cancer is hard. The F*ck Cancer team are here to make it a little bit easy.",
+      "additional_details_(250_words_max)": "Ciitizen is teaming up with the F*ck Cancer team to offer free patient navigation services. The CareLine program is availible to those with a diagnosis of cancer or be a caregier of someone diagnosed with Cancer. How do patient navigators help? By helping you understand medical paperwork, locate support, find second opinions, understand fertility options, identify financial and insurance resources and SO MUCH MORE. Cancer is hard. The F*ck Cancer team are here to make it a little bit easier.",
+      "check_for_eligibility?": false,
+      "eligibility_details": "",
+      "header_image_(url)": "https://base-gl.s3.amazonaws.com/freessttJn/thumb/90a8e15e-d476-40d9-bccd-a6d51513630a.png",
+      "select_tags_to_describe_offer_(upto_5)": "F*CK Cancer, offer"
+    },
+    "publicLink": "1hpkg0uBlEgEI3IzdSR5UMhHA08M9v2T8",
+    "contact_information": {
+      "name": "",
+      "email": "",
+      "phone_number": "",
+      "website_link": "",
+      "offer_page_link_(updated_after_offer_published)": ""
+    }
+  },
+  {
+    "version": "0.0.6",
+    "type_of_offer": "Registry",
+    "partnerId": "1hpkg0uBlEgEI3IzdSR5UMhHA08M9v2T8",
+    "choose_survey": {
+      "title*_(20_words_max)": "Join the BCO Registry!",
+      "short_description_(140_words_max)": "Help advance our understanding of Breast Cancer by part...",
+      "additional_details_(250_words_max)": "Ciitizen is teaming up with the Syngap Research Fund team to offer free patient navigation services. The CareLine program is availible to those with a diagnosis of cancer or be a caregier of someone diagnosed with Cancer. How do patient navigators help? By helping you understand medical paperwork, locate support, find second opinions, understand fertility options, identify financial and insurance resources and SO MUCH MORE. Cancer is hard. The Syngap Research Fund team are here to make it a little bit easier.",
+      "check_for_eligibility?": false,
+      "eligibility_details": "",
+      "header_image_(url)": "https://base-gl.s3.amazonaws.com/freessttJn/thumb/90a8e15e-d476-40d9-bccd-a6d51513630a.png",
+      "select_tags_to_describe_offer_(upto_5)": "Syngap Research Fund, offer"
+    },
+    "publicLink": "1hpkg0uBlEgEI3IzdSR5UMhHA08M9v2T8",
+    "contact_information": {
+      "name": "",
+      "email": "",
+      "phone_number": "",
+      "website_link": "",
+      "offer_page_link_(updated_after_offer_published)": ""
+    }
+  },
+  {
+    "version": "0.0.6",
+    "type_of_offer": "Second Opinion",
+    "partnerId": "1hpkg0uBlEgEI3IzdSR5UMhHA08M9v2T8",
+    "choose_survey": {
+      "title*_(20_words_max)": "Free Second Opinion on your Treatment",
+      "short_description_(140_words_max)": "You qualify for a compensated study we are running to b...",
+      "additional_details_(250_words_max)": "Ciitizen is teaming up with the Syngap Research Fund team to offer free patient navigation services. The CareLine program is availible to those with a diagnosis of cancer or be a caregier of someone diagnosed with Cancer. How do patient navigators help? By helping you understand medical paperwork, locate support, find second opinions, understand fertility options, identify financial and insurance resources and SO MUCH MORE. Cancer is hard. The Syngap Research Fund team are here to make it a little bit easier.",
+      "check_for_eligibility?": false,
+      "eligibility_details": "",
+      "header_image_(url)": "https://base-gl.s3.amazonaws.com/freessttJn/thumb/90a8e15e-d476-40d9-bccd-a6d51513630a.png",
+      "select_tags_to_describe_offer_(upto_5)": "Syngap Research Fund, offer"
+    },
+    "publicLink": "1hpkg0uBlEgEI3IzdSR5UMhHA08M9v2T8",
+    "contact_information": {
+      "name": "",
+      "email": "",
+      "phone_number": "",
+      "website_link": "",
+      "offer_page_link_(updated_after_offer_published)": ""
+    }
+  },
+  {
+    "version": "0.0.6",
+    "type_of_offer": "Sign-up",
+    "partnerId": "1hpkg0uBlEgEI3IzdSR5UMhHA08M9v2T8",
+    "choose_survey": {
+      "title*_(20_words_max)": "No Cost Patient Navigation for those currently in treatment",
+      "short_description_(140_words_max)": "Ciitizen is teaming up with the Syngap Research Fund team to offer free patient navigation services. The CareLine program is availible to those with a diagnosis of cancer or be a caregier of someone diagnosed with Cancer. How do patient navigators help? By helping you understand medical paperwork, locate support, find second opinions, understand fertility options, identify financial and insurance resources and SO MUCH MORE. Cancer is hard. The Syngap Research Fund team are here to make it a little bit easy.",
+      "additional_details_(250_words_max)": "Ciitizen is teaming up with the Syngap Research Fund team to offer free patient navigation services. The CareLine program is availible to those with a diagnosis of cancer or be a caregier of someone diagnosed with Cancer. How do patient navigators help? By helping you understand medical paperwork, locate support, find second opinions, understand fertility options, identify financial and insurance resources and SO MUCH MORE. Cancer is hard. The Syngap Research Fund team are here to make it a little bit easier.",
+      "check_for_eligibility?": false,
+      "eligibility_details": "",
+      "header_image_(url)": "https://base-gl.s3.amazonaws.com/freessttJn/thumb/90a8e15e-d476-40d9-bccd-a6d51513630a.png",
+      "select_tags_to_describe_offer_(upto_5)": "Syngap Research Fund, offer"
+    },
+    "publicLink": "1hpkg0uBlEgEI3IzdSR5UMhHA08M9v2T8",
+    "contact_information": {
+      "name": "",
+      "email": "",
+      "phone_number": "",
+      "website_link": "",
+      "offer_page_link_(updated_after_offer_published)": ""
+    }
+  }
+]

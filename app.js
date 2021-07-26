@@ -7,6 +7,7 @@ var cors = require('cors');
 var app = express();
 var mongoose = require("mongoose");
 var config = require("./config/config");
+const bodyParser = require('body-parser')
 
 
 app.set('views', path.join(__dirname, 'views'));
@@ -15,6 +16,13 @@ app.locals.moment = require('moment')
 app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+app.use(
+  bodyParser.json({
+    limit: '60mb',
+  })
+)
+app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
@@ -43,7 +51,8 @@ app.use(function (err, req, res, next) {
 //       console.log("connected to db")
 //       var seed = require("./seed/seedUsers");
 //       seed.seedUsers();
-
+//        seed.seedPartner();
+//        seed.seedOffer();
 //     }).catch((err) => {
 //       console.log("error connecting database");
 //       throw (err)
@@ -56,6 +65,8 @@ mongoose.connect(config.mongoUri, { useNewUrlParser: true })
     console.log("connected to db")
     var seed = require("./seed/seedUsers");
     seed.seedUsers();
+    seed.seedPartner();
+    seed.seedOffer();
 
   }).catch((err) => {
     console.log("error connecting database");

@@ -1,0 +1,198 @@
+[
+  {
+    "partnerId": "1hpkg0uBlEgEI3IzdSR5UMhHA08M9v2T8",
+    "email":"dialogflow@ciitizen.com",
+    "about": "Promote research and education for the diagnosis, treatment and cure of Syngap1 Syndrome and to provide support to affected individuals and families.",
+    "address": "1270 Lincoln Ave.",
+    
+    "adminEmail": "Mike@syngapresearchfund.org",
+    "adminName": "Mike Graglia",
+    "category": "Advocacy",
+    "city": "Palo Alto",
+    "locationCoordinates": "",
+    "name": "Syngap Research Fund",
+    "orgBio": null,
+    "orgCoverPhoto": "https://images.squarespace-cdn.com/content/v1/5b4b651b3917eeb14f9188d6/1554828877761-0QE1F5ULR5MEKPOK63S0/ke17ZwdGBToddI8pDm48kB2gENoGeRAfK7PGPVUFsjdZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PI80d6iHV93az-cdCVsEzjm6Pi4posws65P0hGbyfyLzQKMshLAGzx4R3EDFOm1kBS/facebook-banner.jpg?format=1500w",
+    "partnerContactNo": "",
+    "partnerEmail": "Mike@syngapresearchfund.org",
+    "partnerName": "",
+    "profilePic": "https://base-gl.s3.amazonaws.com/freessttJn/thumb/5b07d878-c942-47e8-bfa1-f5fcc5a74f28.png",
+    "state": "CA",
+    "templateType": "Partner",
+    "version": "0.0.3",
+    "websiteLink": "https://syngapresearchfund.org/",
+    "emailsAssociated": [
+      "dialogflow@ciitizen.com",
+      "vishal@ciitizen.com"
+    ],
+    "primaryAdmin": {
+      "adminEmail": null,
+      "adminName": null,
+      "partnerId": "1hpkg0uBlEgEI3IzdSR5UMhHA08M9v2T8",
+      "partnerName": "Syngap Research Fund",
+      "templateType": "offer",
+      "version": "0.0.6"
+    }
+  },
+  {
+    "partnerId": "11oL-DiKcvquoOowHnNd_6FhSO-IoWiGk",
+    "email":"avinash@ciitizen.com",
+    "about": "Promote research and education for the diagnosis, treatment and cure of mitochondrial disorders and to provide support to affected individuals and families.",
+    "address": "8085 Saltsburg Road, Suite 201",
+    "adminEmail": null,
+    "adminName": null,
+    "category": "Advocacy",
+    "city": "Pittsburgh, 15239",
+    "locationCoordinates": "40.477768,-79.7447174",
+    "name": "UMDF",
+    "orgBio": null,
+    "orgCoverPhoto": "https://www.umdf.org/wp-content/uploads/2020/05/about.jpg",
+    "partnerContactNo": "1-888-317-UMDF (8633)",
+    "partnerEmail": "",
+    "partnerName": "info@umdf.org",
+    "profilePic": "https://base-gl.s3.amazonaws.com/freessttJn/thumb/4a8f3702-6078-406b-bc96-4f03c60d62b4.jpeg",
+    "state": "PA",
+    "templateType": "Partner",
+    "version": "0.0.3",
+    "websiteLink": "https://www.umdf.org/about/",
+    "emailsAssociated": [
+      "dialogflow@ciitizen.com",
+      "vishal@ciitizen.com"
+    ],
+    "primaryAdmin": {}
+  },
+  {
+    "partnerId": "1P2lA0f346FfCNnB4v8tlxqid-7HLPXHk",
+    "email":"bipinchandratripathi@gmail.com",
+    "about": "Promote research and education for the diagnosis, treatment and cure of FOXG1 Syndrome and to provide support to affected individuals and families.",
+    "address": "One Luckenbach Lane, Sands Point, NY, 11050",
+    "adminEmail": "nicole@foxg1research.org",
+    "adminName": "Nicole Johnson",
+    "category": "Advocacy",
+    "city": "Sands Point",
+    "locationCoordinates": "40.8551939,-73.69599",
+    "name": "FOXG1 Research Foundation",
+    "orgBio": null,
+    "orgCoverPhoto": "https://base-gl.s3.amazonaws.com/freessttJn/thumb/35b90fb2-83e7-4134-bc2e-28f47aeca3cf.jpeg",
+    "partnerContactNo": "",
+    "partnerEmail": "nicole@foxg1research.org",
+    "partnerName": "Nicole Johson",
+    "profilePic": "https://base-gl.s3.amazonaws.com/freessttJn/thumb/14f780a2-7e54-4f53-bd12-c16864584d20.png",
+    "state": "NY",
+    "templateType": "Partner",
+    "websiteLink": "https://foxg1research.org/",
+    "emailsAssociated": [
+      "dialogflow@ciitizen.com",
+      "vishal@ciitizen.com"
+    ],
+    "primaryAdmin": {
+      "adminEmail": "nicole@foxg1research.org",
+      "adminName": "Nicole Johnson",
+      "partnerId": "1P2lA0f346FfCNnB4v8tlxqid-7HLPXHk",
+      "partnerName": "FOXG1 Research Foundation",
+      "templateType": "offer",
+      "version": "0.0.6"
+    }
+  },
+  {
+    "partnerId": "1PNLDKSrzsWhYdFhlSAQdOABaqQtZ2NLL",
+    "email":"demo@ciitizen.com",
+    "about": "Morehouse School of Medicine is a private co-educational medical school in Atlanta, Georgia. Originally a part of Morehouse College, the school became independent in 1981. The school abbreviates its name with its initials \"MSM.\"",
+    "address": "720 Westview Dr SW, Atlanta, GA 30310, United States",
+    "adminEmail": "msmmediarequests@msm.edu ",
+    "adminName": null,
+    "category": "Advocacy",
+    "city": "Atlanta",
+    "locationCoordinates": "37.0902° N, 95.7129° W",
+    "name": "Morehouse School of Medicine",
+    "orgBio": "Morehouse School of Medicine (MSM), located in Atlanta, Ga., was founded in 1975 as the Medical Education Program at Morehouse College. In 1981, MSM became an independently chartered institution. MSM is among the nation’s leading educators of primary care physicians and was recently recognized as the top institution among U.S. medical schools for our social mission. Our faculty and alumni are noted in their fields for excellence in teaching, research and public policy.\n\nMSM is accredited by the Accreditation Council for Continuing Medical Education, Accreditation Council for Graduate Medical Education, Council on Education for Public Health, Liaison Committee on Medical Education and Southern Association of Colleges and Schools.",
+    "orgCoverPhoto": "https://lh5.googleusercontent.com/p/AF1QipNatDl-6OLmWIVp-lfsvMA7Ma8CEOfKHRmz5wyl=w203-h114-k-no",
+    "partnerContactNo": "1-800-232-4636",
+    "partnerEmail": "",
+    "partnerName": "Valerie Montgomery Rice",
+    "profilePic": "https://lh5.googleusercontent.com/p/AF1QipNatDl-6OLmWIVp-lfsvMA7Ma8CEOfKHRmz5wyl=w203-h114-k-no",
+    "state": "Georgia",
+    "templateType": "Partner",
+    "version": "0.0.2",
+    "websiteLink": "https://www.msm.edu/",
+    "emailsAssociated": [
+      "dialogflow@ciitizen.com",
+      "vishal@ciitizen.com"
+    ],
+    "primaryAdmin": {
+      "adminEmail": null,
+      "adminName": null,
+      "partnerId": "1PNLDKSrzsWhYdFhlSAQdOABaqQtZ2NLL",
+      "partnerName": "Morehouse School of Medicine",
+      "templateType": "offer",
+      "version": "0.0.6"
+    }
+  },
+  {
+    "partnerId": "1AQlR1uoh1IndtEd9e2zpzXB5I1JDSY_y",
+    "email":"demo2@ciitizen.com",
+    "about": "Fuck Cancer is a 501 (c) 3 nonprofit in the United States and a registered Canadian charity dedicated to prevention, early detection and providing emotional support and guidance to those affected by cancer. We run digital and on-the-ground programs and events that seek to change the way people think and talk about cancer, ultimately improving health outcomes.",
+    "address": "9854 National Blvd., #280\nLos Angeles, CA, 90034",
+    "adminEmail": null,
+    "adminName": null,
+    "category": "Advocacy ",
+    "city": "Los Angeles",
+    "locationCoordinates": "37.0902° N, 95.7129° W",
+    "name": "F*ck Cancer",
+    "orgBio": null,
+    "orgCoverPhoto": "https://www.letsfcancer.com/wp-content/uploads/2018/09/FC-About-Collage-1400x699.jpg",
+    "partnerContactNo": "",
+    "partnerEmail": "info@letsfcancer.com",
+    "partnerName": "",
+    "profilePic": "https://x.events/wp-content/uploads/2017/01/Fuck-Cancer.jpg",
+    "state": "CA",
+    "templateType": "Partner",
+    "version": "0.0.2",
+    "websiteLink": "https://www.letsfcancer.com/about/our-purpose/",
+    "emailsAssociated": [
+      "dialogflow@ciitizen.com",
+      "vishal@ciitizen.com"
+    ],
+    "primaryAdmin": {
+      "adminEmail": null,
+      "adminName": null,
+      "partnerId": "1AQlR1uoh1IndtEd9e2zpzXB5I1JDSY_y",
+      "partnerName": "F*ck Cancer",
+      "templateType": "offer",
+      "version": "0.0.6"
+    }
+  },
+  {
+    "partnerId": "1ZP5V4tvVXqCdNsXiheBFznOEhcuXDRvP",
+    "email":"demo3@ciitizen.com",
+    "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "address": "4048  Washburn Street",
+    "adminEmail": null,
+    "adminName": null,
+    "category": "Advocacy",
+    "city": "Baton Rouge, 70814",
+    "locationCoordinates": "40.477768,-79.7447174",
+    "name": "TEST-CII",
+    "orgBio": null,
+    "orgCoverPhoto": "https://www.umdf.org/wp-content/uploads/2020/05/about.jpg",
+    "partnerContactNo": "225-454-0480",
+    "partnerEmail": "",
+    "partnerName": "info@test.org",
+    "profilePic": "https://beta.ciitizen.com/clinicaltrialoptions/img/logo-cms-white.97796386.png",
+    "state": "Louisiana",
+    "templateType": "Partner",
+    "websiteLink": "https://www.lipsum.com/",
+    "emailsAssociated": [
+      "dialogflow@ciitizen.com",
+      "vishal@ciitizen.com"
+    ],
+    "primaryAdmin": {
+      "adminEmail": null,
+      "adminName": null,
+      "partnerId": "11oL-DiKcvquoOowHnNd_6FhSO-IoWiGk",
+      "partnerName": "UMDF",
+      "templateType": "offer",
+      "version": "0.0.6"
+    }
+  }
+]

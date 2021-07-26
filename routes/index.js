@@ -5,6 +5,9 @@ var fs = require("fs")
 const path = require('path');
 const GoogleSheet = require('../model/GoogleSheet');
 const User = require('../model/User');
+const Partner = require('../model/Partner');
+const Offer = require('../model/Offer');
+const Mailer = require('../model/Mailer');
 var moment = require("moment")
 
 
@@ -38,6 +41,85 @@ router.get('/api/users', async function (req, res, next) {
     return res.json(JSON.stringify(error))
   }
 });
+
+
+router.get('/api/partner/:email', async function (req, res, next) {
+  try {
+    let user = await Partner.findOne({ email: req.params.email });
+    let offers = await Offer.find({ partnerId: user.partnerId });
+
+    // console.log(offers);
+    let ud = Object.assign(user.toObject(), { offers: offers });
+
+    console.log(ud);
+    return res.json(ud)
+  } catch (error) {
+    return res.json(JSON.stringify(error))
+  }
+});
+
+
+router.post('/api/partner', async function (req, res, next) {
+  try {
+
+    console.log("..update partner....");
+    console.log(req.body);
+    // let user = await Partner.findOne({ email: req.params.email });
+    // let offers = await Offer.find({ partnerId: user.partnerId });
+
+    // // console.log(offers);
+    // let ud = Object.assign(user.toObject(), { offers: offers });
+
+    // console.log(ud);
+    return res.json({})
+  } catch (error) {
+    return res.json(JSON.stringify(error))
+  }
+});
+
+
+router.post('/api/offer', async function (req, res, next) {
+  try {
+
+    console.log("..update offer....");
+    console.log(req.body);
+    // let user = await Partner.findOne({ email: req.params.email });
+    // let offers = await Offer.find({ partnerId: user.partnerId });
+    // // console.log(offers);
+    // let ud = Object.assign(user.toObject(), { offers: offers });
+    // console.log(ud);
+    return res.json({})
+  } catch (error) {
+    return res.json(JSON.stringify(error))
+  }
+});
+
+
+router.get('/api/mailers/:partnerId', async function (req, res, next) {
+  try {
+    console.log("..load mailers....");
+    let total = await Mailer.countDocuments();
+    let mailer = await Mailer.find({ partnerId: req.params.partnerId });
+    return res.json({
+      total,
+      mailer
+    })
+  } catch (error) {
+    return res.json(JSON.stringify(error))
+  }
+});
+
+
+router.post('/api/mailers', async function (req, res, next) {
+  try {
+    console.log("..save mailers....");
+    console.log(req.body);
+    return res.json({});
+  } catch (error) {
+    return res.json(JSON.stringify(error))
+  }
+});
+
 
 
 // https://dailybits.xyz/images/ciitizen.png
