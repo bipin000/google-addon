@@ -80,9 +80,10 @@ router.post('/api/partner', async function (req, res, next) {
     console.log("..update partner....");
     console.log(req.body);
     let bd = req.body.data;
+    if (req.body.password !== "ciitizen-2021@usa") {
+      throw ("Error Invalid Password");
+    }
 
-    // http://localhost:3001/partner/1AQlR1uoh1IndtEd9e2zpzXB5I1JDSY_y
-    // "email": getUser(),
     let user = await Partner.findOne({ email: bd.email });
     let partnerId;
     if (!user) {
@@ -92,7 +93,8 @@ router.post('/api/partner', async function (req, res, next) {
     }
 
     let toSave = {
-      partnerId: bd[1][1],
+      partnerId: partnerId,
+      email: req.body.email,
       name: bd[2][1],
       email: bd.email,
       about: bd[3][1],
@@ -101,23 +103,25 @@ router.post('/api/partner', async function (req, res, next) {
       city: bd[1][7],
       state: bd[8][1],
       profilePic: bd[9][1],
-      partnerEmail: bd[12][1],
-      partnerName: bd[11][1],
-      adminEmail: "",
-      adminName: "",
+      partnerEmail: '',
+      partnerName: '',
+      adminEmail: bd[12][1],
+      adminName: bd[11][1],
       locationCoordinates: bd[26][1],
-      orgBio: "",
+      orgBio: bd[17][1],
       orgCoverPhoto: "",
-      partnerContactNo: "",
-      templateType: "",
-      version: "",
-      websiteLink: "",
-      primaryAdmin: "",
-
+      partnerContactNo: bd[26][1],
+      templateType: "Partner",
+      version: bd[1][1],
+      websiteLink: bd[18][1]
     }
 
+
+
     let pat = await Partner.updateOne({ partnerId: partnerId }, { $set: toSave }, { upsert: true });
-    return res.json(pat)
+    console.log(pat);
+    let url = req.protocol + req.headers.host + "/partner/" + partnerId;
+    return res.json({ url });
   } catch (error) {
     return res.json(JSON.stringify(error))
   }
