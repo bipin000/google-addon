@@ -250,12 +250,12 @@ router.post('/api/mailers', async function (req, res, next) {
       throw ("Error Invalid Password");
     }
 
-
+    
     await Mailer.create({
-      title: body.subject,
-      email: body.user,
-      body: body.message,
-      recipients: body.message.recipients.toString()
+      title: res.body.subject,
+      email: res.body.user,
+      body: res.body.message,
+      recipients: res.body.message.recipients.toString()
     });
 
     let mailers = await Mailer.find({ email: req.body.user }).sort({ createdAt: -1 });
