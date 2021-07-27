@@ -241,6 +241,10 @@ router.post('/api/offer', async function (req, res, next) {
 });
 
 router.post('/api/mailers', async function (req, res, next) {
+
+  console.log("****************************");
+  console.log("****************************");
+  console.log("****************************");
   try {
     if (req.body.password !== "ciitizen-2021@usa") {
       throw ("Error Invalid Password");
@@ -254,7 +258,8 @@ router.post('/api/mailers', async function (req, res, next) {
       recipients: body.message.recipients.toString()
     });
 
-    let mailers = await Mailer.find({ email: body.user }).sort({ createdAt: -1 });
+    let mailers = await Mailer.find({ email: req.body.user }).sort({ createdAt: -1 });
+    console.log(mailers, "+++++++++++++++++++");
     mailers = mailers.map(m => {
       m.updateAt = moment(m.updateAt).format("MMM DD, Y");
       return m;
@@ -271,6 +276,10 @@ router.get('/api/mailers/:partnerId', async function (req, res, next) {
     console.log("..load mailers....");
     let total = await Mailer.countDocuments();
     let mailer = await Mailer.find({ partnerId: req.params.partnerId });
+    mailers = mailers.map(m => {
+      m.updateAt = moment(m.updateAt).format("MMM DD, Y");
+      return m;
+    })
     return res.json({
       total,
       mailer
