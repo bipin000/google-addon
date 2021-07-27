@@ -248,14 +248,14 @@ router.post('/api/mailers', async function (req, res, next) {
     if (req.body.password !== "ciitizen-2021@usa") {
       throw ("Error Invalid Password");
     }
-    
+
     console.log("****************************", req.body);
-    
+
     let m = await Mailer.create({
-      title: req.body.subject,
-      email: req.body.user,
-      body: res.body.message,
-      recipients: req.body.recipients.toString()
+      title: "aaa",
+      email: "aaaa",
+      body: "aaaaa",
+      recipients: "aaa"
     });
     console.log(m);
 
