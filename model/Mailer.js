@@ -3,6 +3,7 @@ const mongoose = require("mongoose")
 const schema = mongoose.Schema({
   title: String,
   partnerId: String,
+  email: String,
   recipients: String,
   emails: [String],
   body: String

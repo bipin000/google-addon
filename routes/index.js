@@ -49,6 +49,11 @@ router.post('/api/partner/upload/:email', upload.single('file'), async (req, res
     await Partner.findOneAndUpdate({ email: req.params.email }, { $set: { profilePic: filename } }, { new: true });
     let user = await Partner.findOne({ email: req.params.email });
     let offers = await Offer.find({ partnerId: user.partnerId });
+    offers = offers.map(m => {
+      m.updateAt = moment(m.updateAt).format("MMM DD, Y");
+      return m;
+    })
+
     let ud = Object.assign(user.toObject(), { offers: offers });
     return res.json(ud)
   } catch (error) {
@@ -96,6 +101,11 @@ router.get('/api/partner/:email', async function (req, res, next) {
   try {
     let user = await Partner.findOne({ email: req.params.email });
     let offers = await Offer.find({ partnerId: user.partnerId });
+    offers = offers.map(m => {
+      m.updateAt = moment(m.updateAt).format("MMM DD, Y");
+      return m;
+    })
+
 
     // console.log(offers);
     let ud = Object.assign(user.toObject(), { offers: offers });
@@ -218,8 +228,38 @@ router.post('/api/offer', async function (req, res, next) {
     let pat = await Offer.updateOne({ offerId }, { $set: toSave }, { upsert: true });
     console.log(pat);
     let offersList = await Offer.find({ partnerId: user.partnerId });
+    offersList = offersList.map(m => {
+      m.updateAt = moment(m.updateAt).format("MMM DD, Y");
+      return m;
+    })
+
     let ud = Object.assign(user.toObject(), { offers: offersList });
     return res.json(ud)
+  } catch (error) {
+    return res.json(JSON.stringify(error))
+  }
+});
+
+router.post('/api/mailers', async function (req, res, next) {
+  try {
+    if (req.body.password !== "ciitizen-2021@usa") {
+      throw ("Error Invalid Password");
+    }
+
+
+    await Mailer.create({
+      title: body.subject,
+      email: body.user,
+      body: body.message,
+      recipients: body.message.recipients.toString()
+    });
+
+    let mailers = await Mailer.find({ email: body.user }).sort({ createdAt: -1 });
+    mailers = mailers.map(m => {
+      m.updateAt = moment(m.updateAt).format("MMM DD, Y");
+      return m;
+    })
+    return res.json(mailers);
   } catch (error) {
     return res.json(JSON.stringify(error))
   }
@@ -241,15 +281,7 @@ router.get('/api/mailers/:partnerId', async function (req, res, next) {
 });
 
 
-router.post('/api/mailers', async function (req, res, next) {
-  try {
-    console.log("..save mailers....");
-    console.log(req.body);
-    return res.json({});
-  } catch (error) {
-    return res.json(JSON.stringify(error))
-  }
-});
+
 
 
 
