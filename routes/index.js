@@ -270,15 +270,16 @@ router.post('/api/mailers', async function (req, res, next) {
 router.get('/api/mailers/:partnerId', async function (req, res, next) {
   try {
     console.log("..load mailers....");
-    let total = await Mailer.countDocuments();
-    let mailer = await Mailer.find({ email: req.params.partnerId });
+    let total = await Mailer.countDocuments({ email: req.params.partnerId });
+    console.log(total);
+    let mailers = await Mailer.find({ email: req.params.partnerId });
     mailers = mailers.map(m => {
       m.updatedAt = moment(m.updatedAt).format("MMM DD, Y");
       return m;
     })
     return res.json({
       total,
-      mailer
+      mailers
     })
   } catch (error) {
     return res.json(JSON.stringify(error))
