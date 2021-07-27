@@ -50,7 +50,7 @@ router.post('/api/partner/upload/:email', upload.single('file'), async (req, res
     let user = await Partner.findOne({ email: req.params.email });
     let offers = await Offer.find({ partnerId: user.partnerId });
     offers = offers.map(m => {
-      m.updateAt = moment(m.updateAt).format("MMM DD, Y");
+      m.updatedAt = moment(m.updatedAt).format("MMM DD, Y");
       return m;
     })
 
@@ -102,7 +102,7 @@ router.get('/api/partner/:email', async function (req, res, next) {
     let user = await Partner.findOne({ email: req.params.email });
     let offers = await Offer.find({ partnerId: user.partnerId });
     offers = offers.map(m => {
-      m.updateAt = moment(m.updateAt).format("MMM DD, Y");
+      m.updatedAt = moment(m.updatedAt).format("MMM DD, Y");
       return m;
     })
 
@@ -229,7 +229,7 @@ router.post('/api/offer', async function (req, res, next) {
     console.log(pat);
     let offersList = await Offer.find({ partnerId: user.partnerId });
     offersList = offersList.map(m => {
-      m.updateAt = moment(m.updateAt).format("MMM DD, Y");
+      m.updatedAt = moment(m.updatedAt).format("MMM DD, Y");
       return m;
     })
 
@@ -254,7 +254,7 @@ router.post('/api/mailers', async function (req, res, next) {
     // 4|google-addon  |   subject: 'Do mealtimes matter?',
     // 4|google-addon  |   message: 'Hi  {{patient_name}},\r\n' +
 
-    
+
     let m = await Mailer.create({
       title: req.body.subject,
       email: req.body.user,
@@ -266,7 +266,7 @@ router.post('/api/mailers', async function (req, res, next) {
     let mailers = await Mailer.find({ email: req.body.user }).sort({ createdAt: -1 });
     console.log(mailers, "+++++++++++++++++++");
     mailers = mailers.map(m => {
-      m.updateAt = moment(m.updateAt).format("MMM DD, Y");
+      m.updatedAt = moment(m.updatedAt).format("MMM DD, Y");
       return m;
     })
     return res.json(mailers);
@@ -282,7 +282,7 @@ router.get('/api/mailers/:partnerId', async function (req, res, next) {
     let total = await Mailer.countDocuments();
     let mailer = await Mailer.find({ partnerId: req.params.partnerId });
     mailers = mailers.map(m => {
-      m.updateAt = moment(m.updateAt).format("MMM DD, Y");
+      m.updatedAt = moment(m.updatedAt).format("MMM DD, Y");
       return m;
     })
     return res.json({
