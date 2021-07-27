@@ -249,13 +249,13 @@ router.post('/api/mailers', async function (req, res, next) {
       throw ("Error Invalid Password");
     }
     
-    // body: res.body.message,
     console.log("****************************", req.body);
-
+    
     let m = await Mailer.create({
       title: req.body.subject,
       email: req.body.user,
-      recipients: req.body.message.recipients.toString()
+      body: res.body.message,
+      recipients: req.body.recipients.toString()
     });
     console.log(m);
 
