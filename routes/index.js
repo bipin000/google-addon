@@ -48,8 +48,8 @@ router.post('/api/partner/upload/:email', upload.single('file'), async (req, res
     let filename = req.protocol + "://" + req.headers.host + "/images/" + req.file.filename;
     await Partner.findOneAndUpdate({ email: req.params.email }, { $set: { profilePic: filename } }, { new: true });
     let user = await Partner.findOne({ email: req.params.email });
-    let offers = await Offer.find({ partnerId: user.partnerId });
-    offers = offers.map(m => {
+    let offers = await Offer.find({ partnerId: user.partnerId }).sort({ createdAt: -1 });
+    offers = offers.toObject().map(m => {
       m.updatedAt = moment(m.updatedAt).format("MMM DD, Y");
       return m;
     })
@@ -100,8 +100,8 @@ router.get('/partner/:pid', async function (req, res, next) {
 router.get('/api/partner/:email', async function (req, res, next) {
   try {
     let user = await Partner.findOne({ email: req.params.email });
-    let offers = await Offer.find({ partnerId: user.partnerId });
-    offers = offers.map(m => {
+    let offers = await Offer.find({ partnerId: user.partnerId }).sort({ createdAt: -1 });
+    offers = offers.toObject().map(m => {
       m.updatedAt = moment(m.updatedAt).format("MMM DD, Y");
       return m;
     })
