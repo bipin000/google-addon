@@ -136,5 +136,74 @@
       "website_link": "",
       "offer_page_link_(updated_after_offer_published)": ""
     }
+  },
+  {
+    "version": "0.0.6",
+    "type_of_offer": "Sign-up",
+    "offerId": "7",
+    "partnerId": "1P2lA0f346FfCNnB4v8tlxqid-7HLPXHk",
+    "choose_survey": {
+      "title*_(20_words_max)": "Sign-up to the FOXG1 Research Newsletter!",
+      "short_description_(140_words_max)": "Don’t Miss Our News! Sign up here to stay connected along our path to a cure.",
+      "additional_details_(250_words_max)": "Our newsletter contains research information, new therapies being developed for FOXG1 syndrome, information on our patient registry and natural history studies, information on FOXG1 families and much more.",
+      "check_for_eligibility?": false,
+      "eligibility_details": "",
+      "header_image_(url)": "https://images.squarespace-cdn.com/content/v1/5bcd3cd67eb88c069bab1ab5/1540923217173-HPMU7QZMF1IY7LDTAXM3/ke17ZwdGBToddI8pDm48kIDiEugKdk80dD_7cHAKbA57gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UWep5n2ddytmBanWq2ntULHIXZDWnIRf8REEW-N1l7pg9nbNHqSHHo1Tv0smdRXS3g/567040862.jpg?format=1500w",
+      "select_tags_to_describe_offer_(upto_5)": "FOXG1 Research, signup"
+    },
+    "publicLink": "http://dailybits.xyz/offer/7",
+    "contact_information": {
+      "name": "Nicole Johnson",
+      "email": "nicole@foxg1research.org",
+      "phone_number": "",
+      "website_link": "",
+      "offer_page_link_(updated_after_offer_published)": ""
+    }
+  },
+  {
+    "version": "0.0.6",
+    "type_of_offer": "Sign-up",
+    "offerId": "8",
+    "partnerId": "1P2lA0f346FfCNnB4v8tlxqid-7HLPXHk",
+    "choose_survey": {
+      "title*_(20_words_max)": "Sleep Habits Survey",
+      "short_description_(140_words_max)": "This survey helps document your child’s sleep habits and can help with their care and research.",
+      "additional_details_(250_words_max)": "Information about sleep habits are not often found in patient’s medical records. Thus, this survey allows you to give information relatiing to this important aspect.",
+      "check_for_eligibility?": false,
+      "eligibility_details": "",
+      "header_image_(url)": "https://base-gl.s3.amazonaws.com/freessttJn/thumb/465992ff-e3af-42ff-b735-26b94448cd45.jpeg",
+      "select_tags_to_describe_offer_(upto_5)": "FOXG1 Research, signup"
+    },
+    "publicLink": "http://dailybits.xyz/offer/8",
+    "contact_information": {
+      "name": "Nicole Johnson",
+      "email": "nicole@foxg1research.org",
+      "phone_number": "",
+      "website_link": "",
+      "offer_page_link_(updated_after_offer_published)": ""
+    }
+  },
+  {
+    "version": "0.0.6",
+    "type_of_offer": "Sign-up",
+    "offerId": "9",
+    "partnerId": "1P2lA0f346FfCNnB4v8tlxqid-7HLPXHk",
+    "choose_survey": {
+      "title*_(20_words_max)": "Motor Function Assessment Survey",
+      "short_description_(140_words_max)": "This critical survey provides motor function assessment of your child based on their movement behaviors and use of assistive technologies",
+      "additional_details_(250_words_max)": "This survey is critical in order to create a full Natural History of your child. The following questionnaire provides an age-specific assessment of the level of motor function you or your child has currently based on their movement behaviors and use of assistive technologies.",
+      "check_for_eligibility?": false,
+      "eligibility_details": "",
+      "header_image_(url)": "https://base-gl.s3.amazonaws.com/freessttJn/thumb/15727416-10fe-4590-bcd3-7070ce113b73.jpeg",
+      "select_tags_to_describe_offer_(upto_5)": "FOXG1 Research, signup"
+    },
+    "publicLink": "http://dailybits.xyz/offer/9",
+    "contact_information": {
+      "name": "Nicole Johnson",
+      "email": "nicole@foxg1research.org",
+      "phone_number": "",
+      "website_link": "",
+      "offer_page_link_(updated_after_offer_published)": ""
+    }
   }
 ]
