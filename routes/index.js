@@ -194,21 +194,21 @@ router.post('/api/offer', async function (req, res, next) {
       version: bd[1][1],
       offerId: offerId,
       partnerId: partnerId,
-      type_of_offer: bd[1][2],
+      type_of_offer: bd[2][1],
       choose_survey: {
-        "title*_(20_words_max)": bd[1][4],
-        "short_description_(140_words_max)": bd[1][5],
-        "additional_details_(250_words_max)": bd[1][6],
-        "check_for_eligibility?": bd[1][7],
-        "eligibility_details": bd[1][8],
-        "header_image_(url)": bd[1][9],
-        "select_tags_to_describe_offer_(upto_5)": bd[1][10]
+        "title*_(20_words_max)": bd[4][1],
+        "short_description_(140_words_max)": bd[5][1],
+        "additional_details_(250_words_max)": bd[6][1],
+        "check_for_eligibility?": bd[7][1],
+        "eligibility_details": bd[8][1],
+        "header_image_(url)": bd[9][1],
+        "select_tags_to_describe_offer_(upto_5)": bd[10][1]
       },
       contact_information: {
-        "name": bd[1][12],
-        "email": bd[1][13],
-        "phone_number": bd[1][14],
-        "website_link": bd[1][15],
+        "name": bd[12][1],
+        "email": bd[13][1],
+        "phone_number": bd[14][1],
+        "website_link": bd[15][1],
         "offer_page_link_(updated_after_offer_published)": url
       }
     }
