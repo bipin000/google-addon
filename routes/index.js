@@ -249,11 +249,15 @@ router.post('/api/mailers', async function (req, res, next) {
       throw ("Error Invalid Password");
     }
 
-    console.log("****************************", req.body);
+    // console.log("****************************", req.body);
+    // user: 'dialogflow@ciitizen.com',
+    // 4|google-addon  |   subject: 'Do mealtimes matter?',
+    // 4|google-addon  |   message: 'Hi  {{patient_name}},\r\n' +
 
+    
     let m = await Mailer.create({
-      title: "aaa",
-      email: "aaaa",
+      title: req.body.subject,
+      email: req.body.user,
       body: "aaaaa",
       recipients: "aaa"
     });
