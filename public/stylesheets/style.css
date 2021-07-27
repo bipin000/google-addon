@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
 html {
   background-color: #f1f1f1;
 }
@@ -13,18 +14,21 @@ body {
   background-color: #fff;
   font-family: 'Roboto', sans-serif;
   */
-} 
+}
 
 a {
   color: #000;
   text-decoration: none;
 }
-.b-label{
+
+.b-label {
   font-weight: 800;
 }
+
 .list-item:nth-child(even) {
   background-color: #FFFFE5;
 }
+
 .list-item:nth-child(odd) {
   background-color: #ECECF9;
 }
@@ -45,8 +49,15 @@ a {
   transition: all .2s ease-in;
   background: #f5f5f5;
 }
-.back{
+
+.back {
   position: absolute;
-  top:5px;
+  top: 5px;
+  left: 15px;
   z-index: 9005;
+}
+
+.container {
+  position: relative;
+  padding-bottom: 200px;
 }

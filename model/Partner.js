@@ -22,7 +22,8 @@ const schema = mongoose.Schema({
   version: String,
   websiteLink: String,
   primaryAdmin: Object,
-  emailsAssociated: [String]
+  emailsAssociated: [String],
+  url: String
 }, { timestamps: true })
 
 module.exports = mongoose.model("Partner", schema)

@@ -125,6 +125,7 @@ router.post('/api/partner', async function (req, res, next) {
     } else {
       partnerId = user.partnerId;
     }
+    let url = req.protocol + "://" + req.headers.host + "/partner/" + partnerId;
 
     let toSave = {
       partnerId: partnerId,
@@ -147,15 +148,15 @@ router.post('/api/partner', async function (req, res, next) {
       partnerContactNo: bd[26][1],
       templateType: "Partner",
       version: bd[1][1],
-      websiteLink: bd[18][1]
+      websiteLink: bd[18][1],
+      url: url
     }
 
 
-    console.log("tosave...........................",toSave);
+    console.log("tosave...........................", toSave);
     let pat = await Partner.updateOne({ email }, { $set: toSave }, { upsert: true });
     console.log(pat);
-    let url = req.protocol + req.headers.host + "/partner/" + partnerId;
-    return res.json({ url });
+    return res.send(url);
   } catch (error) {
     return res.json(JSON.stringify(error))
   }
