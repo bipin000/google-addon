@@ -258,8 +258,8 @@ router.post('/api/mailers', async function (req, res, next) {
     let m = await Mailer.create({
       title: req.body.subject,
       email: req.body.user,
-      body: "aaaaa",
-      recipients: "aaa"
+      body: req.body.message,
+      recipients: req.body.recipients
     });
     console.log(m);
 
