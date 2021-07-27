@@ -9,6 +9,22 @@ const Partner = require('../model/Partner');
 const Offer = require('../model/Offer');
 const Mailer = require('../model/Mailer');
 var moment = require("moment")
+var multer = require('multer');
+const { json } = require('body-parser');
+// var upload = multer({ dest: './public/partners/' })
+
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, './public/images/')
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + path.extname(file.originalname)) //Appending extension
+  }
+})
+
+var upload = multer({ storage: storage });
+
+
 
 
 
@@ -23,6 +39,22 @@ router.get('/', async function (req, res, next) {
   // res.send('welcome to google addons demo 🙏');
 });
 
+
+
+router.post('/api/partner/upload/:email', upload.single('file'), async (req, res) => {
+  console.log("uploading files......");
+  try {
+    console.log(req.file);
+    let filename = req.protocol + "://" + req.headers.host + "/images/" + req.file.filename;
+    await Partner.findOneAndUpdate({ email: req.params.email }, { $set: { profilePic: filename } }, { new: true });
+    let user = await Partner.findOne({ email: req.params.email });
+    let offers = await Offer.find({ partnerId: user.partnerId });
+    let ud = Object.assign(user.toObject(), { offers: offers });
+    return res.json(ud)
+  } catch (error) {
+    console.error(error);
+  }
+})
 
 router.get('/api/users', async function (req, res, next) {
   try {
@@ -58,6 +90,8 @@ router.get('/partner/:pid', async function (req, res, next) {
 });
 
 
+
+
 router.get('/api/partner/:email', async function (req, res, next) {
   try {
     let user = await Partner.findOne({ email: req.params.email });
@@ -77,14 +111,16 @@ router.get('/api/partner/:email', async function (req, res, next) {
 router.post('/api/partner', async function (req, res, next) {
   try {
 
-    console.log("..update partner....");
-    console.log(req.body);
+    // console.log("..update partner....");
+    // console.log(req.body);
     let bd = req.body.data;
+    let email = req.body.email;
     if (req.body.password !== "ciitizen-2021@usa") {
       throw ("Error Invalid Password");
     }
 
-    let user = await Partner.findOne({ email: bd.email });
+    let user = await Partner.findOne({ email });
+    console.log("......user found................", user);
     let partnerId;
     if (!user) {
       partnerId = Math.random().toString();
@@ -96,7 +132,7 @@ router.post('/api/partner', async function (req, res, next) {
       partnerId: partnerId,
       email: req.body.email,
       name: bd[2][1],
-      email: bd.email,
+      email: email,
       about: bd[3][1],
       category: bd[4][1],
       address: bd[6][1],
@@ -118,7 +154,7 @@ router.post('/api/partner', async function (req, res, next) {
 
 
 
-    let pat = await Partner.updateOne({ partnerId: partnerId }, { $set: toSave }, { upsert: true });
+    let pat = await Partner.updateOne({ email }, { $set: toSave }, { upsert: true });
     console.log(pat);
     let url = req.protocol + req.headers.host + "/partner/" + partnerId;
     return res.json({ url });
@@ -279,6 +315,9 @@ router.get('/user/:username', async function (req, res, next) {
   }
 
 });
+
+
+
 
 
 
