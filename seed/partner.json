@@ -28,8 +28,6 @@
     "primaryAdmin": {
       "adminEmail": null,
       "adminName": null,
-      "partnerId": "1hpkg0uBlEgEI3IzdSR5UMhHA08M9v2T8",
-      "url": "https://dailybits.xyz/partner/1hpkg0uBlEgEI3IzdSR5UMhHA08M9v2T8",
       "partnerName": "Syngap Research Fund",
       "templateType": "offer",
       "version": "0.0.6"
@@ -65,7 +63,7 @@
   },
   {
     "partnerId": "1P2lA0f346FfCNnB4v8tlxqid-7HLPXHk",
-    "url": "https://dailybits.xyz/partner/1P2lA0f346FfCNnB4v8tlxqid",
+    "url": "https://dailybits.xyz/partner/1P2lA0f346FfCNnB4v8tlxqid-7HLPXHk",
     "email": "dialogflow@ciitizen.com",
     "about": "Promote research and education for the diagnosis, treatment and cure of FOXG1 Syndrome and to provide support to affected individuals and families.",
     "address": "One Luckenbach Lane, Sands Point, NY, 11050",
@@ -91,8 +89,6 @@
     "primaryAdmin": {
       "adminEmail": "nicole@foxg1research.org",
       "adminName": "Nicole Johnson",
-      "partnerId": "1P2lA0f346FfCNnB4v8tlxqid-7HLPXHk",
-      "url": "https://dailybits.xyz/partner/1P2lA0f346FfCNnB4v8tlxqid",
       "partnerName": "FOXG1 Research Foundation",
       "templateType": "offer",
       "version": "0.0.6"
@@ -127,8 +123,6 @@
     "primaryAdmin": {
       "adminEmail": null,
       "adminName": null,
-      "partnerId": "1PNLDKSrzsWhYdFhlSAQdOABaqQtZ2NLL",
-      "url": "https://dailybits.xyz/partner/1PNLDKSrzsWhYdFhlSAQdOABaqQtZ2NLL",
       "partnerName": "Morehouse School of Medicine",
       "templateType": "offer",
       "version": "0.0.6"
@@ -163,8 +157,6 @@
     "primaryAdmin": {
       "adminEmail": null,
       "adminName": null,
-      "partnerId": "1AQlR1uoh1IndtEd9e2zpzXB5I1JDSY_y",
-      "url": "https://dailybits.xyz/partner/1AQlR1uoh1IndtEd9e2zpzXB5I1JDSY_y",
       "partnerName": "F*ck Cancer",
       "templateType": "offer",
       "version": "0.0.6"
@@ -198,8 +190,6 @@
     "primaryAdmin": {
       "adminEmail": null,
       "adminName": null,
-      "partnerId": "11oL-DiKcvquoOowHnNd_6FhSO-IoWiGk",
-      "url": "https://dailybits.xyz/partner/DiKcvquoOowHnNd_6FhSO",
       "partnerName": "UMDF",
       "templateType": "offer",
       "version": "0.0.6"
