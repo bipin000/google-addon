@@ -23,7 +23,15 @@ const schema = mongoose.Schema({
   websiteLink: String,
   primaryAdmin: Object,
   emailsAssociated: [String],
-  url: String
+  url: String,
+  tnc: String,
+  payment_setup: String,
+  disbursements: String,
+  fb: String,
+  linkedin: String,
+  insta: String,
+  twitter: String,
+  orgCoverPhoto: String
 }, { timestamps: true })
 
 module.exports = mongoose.model("Partner", schema)
