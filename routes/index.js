@@ -242,18 +242,11 @@ router.post('/api/offer', async function (req, res, next) {
 
 router.post('/api/mailers', async function (req, res, next) {
 
-  console.log("****************************");
-  console.log("****************************");
+
   try {
     if (req.body.password !== "ciitizen-2021@usa") {
       throw ("Error Invalid Password");
     }
-
-    // console.log("****************************", req.body);
-    // user: 'dialogflow@ciitizen.com',
-    // 4|google-addon  |   subject: 'Do mealtimes matter?',
-    // 4|google-addon  |   message: 'Hi  {{patient_name}},\r\n' +
-
 
     let m = await Mailer.create({
       title: req.body.subject,
@@ -261,10 +254,8 @@ router.post('/api/mailers', async function (req, res, next) {
       body: req.body.message,
       recipients: req.body.recipients
     });
-    console.log(m);
 
     let mailers = await Mailer.find({ email: req.body.user }).sort({ createdAt: -1 });
-    console.log(mailers, "+++++++++++++++++++");
     mailers = mailers.map(m => {
       m.updatedAt = moment(m.updatedAt).format("MMM DD, Y");
       return m;
@@ -280,7 +271,7 @@ router.get('/api/mailers/:partnerId', async function (req, res, next) {
   try {
     console.log("..load mailers....");
     let total = await Mailer.countDocuments();
-    let mailer = await Mailer.find({ partnerId: req.params.partnerId });
+    let mailer = await Mailer.find({ email: req.params.partnerId });
     mailers = mailers.map(m => {
       m.updatedAt = moment(m.updatedAt).format("MMM DD, Y");
       return m;
