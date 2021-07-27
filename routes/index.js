@@ -244,7 +244,7 @@ router.post('/api/mailers', async function (req, res, next) {
 
   console.log("****************************");
   console.log("****************************");
-  console.log("****************************");
+  console.log("****************************", req.body);
   try {
     if (req.body.password !== "ciitizen-2021@usa") {
       throw ("Error Invalid Password");
