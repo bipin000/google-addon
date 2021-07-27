@@ -111,8 +111,7 @@ router.get('/api/partner/:email', async function (req, res, next) {
 router.post('/api/partner', async function (req, res, next) {
   try {
 
-    // console.log("..update partner....");
-    // console.log(req.body);
+    console.log("..update partner....");
     let bd = req.body.data;
     let email = req.body.email;
     if (req.body.password !== "ciitizen-2021@usa") {
@@ -120,7 +119,6 @@ router.post('/api/partner', async function (req, res, next) {
     }
 
     let user = await Partner.findOne({ email });
-    console.log("......user found................", user);
     let partnerId;
     if (!user) {
       partnerId = Math.random().toString();
@@ -153,7 +151,7 @@ router.post('/api/partner', async function (req, res, next) {
     }
 
 
-
+    console.log("tosave...........................",toSave);
     let pat = await Partner.updateOne({ email }, { $set: toSave }, { upsert: true });
     console.log(pat);
     let url = req.protocol + req.headers.host + "/partner/" + partnerId;
