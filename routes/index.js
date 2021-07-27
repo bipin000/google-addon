@@ -82,7 +82,7 @@ router.get('/api/users', async function (req, res, next) {
 router.get('/partner/:pid', async function (req, res, next) {
   try {
 
-    let partner = await Partner.findOne({ partnerId: req.params.pid });
+    let partner = await Partner.findOne({ partnerId: req.params.pid }).lean();
     console.log(partner);
     if (partner)
       res.render('partner', { partner })
@@ -222,7 +222,7 @@ router.post('/api/offer', async function (req, res, next) {
     console.log("tosave...........................", toSave);
     let pat = await Offer.updateOne({ offerId }, { $set: toSave }, { upsert: true });
     console.log(pat);
-    let offersList = await Offer.find({ partnerId: user.partnerId });
+    let offersList = await Offer.find({ partnerId: user.partnerId }).lean();
     offersList = offersList.map(m => {
       m.updatedAt = moment(m.updatedAt).format("MMM DD, Y");
       return m;
@@ -267,7 +267,7 @@ router.get('/api/mailers/:partnerId', async function (req, res, next) {
     console.log("..load mailers....");
     let total = await Mailer.countDocuments({ email: req.params.partnerId });
     console.log(total);
-    let mailers = await Mailer.find({ email: req.params.partnerId });
+    let mailers = await Mailer.find({ email: req.params.partnerId }).lean();
     mailers = mailers.map(m => {
       m.updatedAt = moment(m.updatedAt).format("MMM DD, Y");
       return m;
