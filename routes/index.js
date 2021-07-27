@@ -32,7 +32,7 @@ router.get('/', async function (req, res, next) {
   let total = User.count({});
   let page = req.params.page || 0
   let limit = 300;
-  let users = await User.find({}).sort({ createdAt: -1 }).skip(page * limit).limit(limit);
+  let users = await User.find({}).sort({ createdAt: -1 }).lean().skip(page * limit).limit(limit);
   console.log(users);
   // res.json(docs);
   res.render('user-list', { title: 'Profiles', data: users })
@@ -48,7 +48,7 @@ router.post('/api/partner/upload/:email', upload.single('file'), async (req, res
     let filename = req.protocol + "://" + req.headers.host + "/images/" + req.file.filename;
     await Partner.findOneAndUpdate({ email: req.params.email }, { $set: { profilePic: filename } }, { new: true });
     let user = await Partner.findOne({ email: req.params.email });
-    let offers = await Offer.find({ partnerId: user.partnerId }).sort({ createdAt: -1 });
+    let offers = await Offer.find({ partnerId: user.partnerId }).sort({ createdAt: -1 }).lean();
     offers = offers.map(m => {
       m.updatedAt = moment(m.updatedAt).format("MMM DD, Y");
       return m;
@@ -100,17 +100,12 @@ router.get('/partner/:pid', async function (req, res, next) {
 router.get('/api/partner/:email', async function (req, res, next) {
   try {
     let user = await Partner.findOne({ email: req.params.email });
-    let offers = await Offer.find({ partnerId: user.partnerId }).sort({ createdAt: -1 });
+    let offers = await Offer.find({ partnerId: user.partnerId }).sort({ createdAt: -1 }).lean();
     offers = offers.map(m => {
       m.updatedAt = moment(m.updatedAt).format("MMM DD, Y");
       return m;
     })
-
-
-    // console.log(offers);
     let ud = Object.assign(user.toObject(), { offers: offers });
-
-    console.log(ud);
     return res.json(ud)
   } catch (error) {
     return res.json(JSON.stringify(error))
@@ -255,7 +250,7 @@ router.post('/api/mailers', async function (req, res, next) {
       recipients: req.body.recipients
     });
 
-    let mailers = await Mailer.find({ email: req.body.user }).sort({ createdAt: -1 });
+    let mailers = await Mailer.find({ email: req.body.user }).sort({ createdAt: -1 }).lean();
     mailers = mailers.map(m => {
       m.updatedAt = moment(m.updatedAt).format("MMM DD, Y");
       return m;
