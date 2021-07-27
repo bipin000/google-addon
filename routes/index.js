@@ -168,12 +168,58 @@ router.post('/api/offer', async function (req, res, next) {
 
     console.log("..update offer....");
     console.log(req.body);
-    // let user = await Partner.findOne({ email: req.params.email });
-    // let offers = await Offer.find({ partnerId: user.partnerId });
-    // // console.log(offers);
-    // let ud = Object.assign(user.toObject(), { offers: offers });
-    // console.log(ud);
-    return res.json({})
+    let bd = req.body.data;
+    let email = req.body.email;
+    let offerId = req.body.offerId;
+    if (req.body.password !== "ciitizen-2021@usa") {
+      throw ("Error Invalid Password");
+    }
+
+    let user = await Partner.findOne({ email });
+    let offer = await Offer.findOne({ offerId });
+    let partnerId;
+    if (!user) {
+      partnerId = Math.random().toString();
+    } else {
+      partnerId = user.partnerId;
+    }
+    if (offer) {
+      offerId = offer.offerId;
+    } else {
+      offerId = Math.random().toString();
+    }
+    let url = req.protocol + "://" + req.headers.host + "/offer/" + offerId;
+
+    let toSave = {
+      version: bd[1][1],
+      offerId: offerId,
+      partnerId: partnerId,
+      type_of_offer: bd[1][2],
+      choose_survey: {
+        "title*_(20_words_max)": bd[1][4],
+        "short_description_(140_words_max)": bd[1][5],
+        "additional_details_(250_words_max)": bd[1][6],
+        "check_for_eligibility?": bd[1][7],
+        "eligibility_details": bd[1][8],
+        "header_image_(url)": bd[1][9],
+        "select_tags_to_describe_offer_(upto_5)": bd[1][10]
+      },
+      contact_information: {
+        "name": bd[1][12],
+        "email": bd[1][13],
+        "phone_number": bd[1][14],
+        "website_link": bd[1][15],
+        "offer_page_link_(updated_after_offer_published)": url
+      }
+    }
+
+
+    console.log("tosave...........................", toSave);
+    let pat = await Offer.updateOne({ offerId }, { $set: toSave }, { upsert: true });
+    console.log(pat);
+    let offersList = await Offer.find({ partnerId: user.partnerId });
+    let ud = Object.assign(user.toObject(), { offers: offersList });
+    return res.json(ud)
   } catch (error) {
     return res.json(JSON.stringify(error))
   }

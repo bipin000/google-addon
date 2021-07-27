@@ -2,6 +2,7 @@ const mongoose = require("mongoose")
 
 const schema = mongoose.Schema({
   version: String,
+  offerId: String,
   partnerId: String,
   type_of_offer: String,
   choose_survey: Object,

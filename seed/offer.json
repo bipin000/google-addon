@@ -3,6 +3,7 @@
     "version": "0.0.6",
     "type_of_offer": "Registry",
     "partnerId": "1AQlR1uoh1IndtEd9e2zpzXB5I1JDSY_y",
+    "offerId": "1",
     "choose_survey": {
       "title*_(20_words_max)": "Join the BCO Registry!",
       "short_description_(140_words_max)": "Help advance our understanding of Breast Cancer by part...",
@@ -12,7 +13,7 @@
       "header_image_(url)": "https://base-gl.s3.amazonaws.com/freessttJn/thumb/90a8e15e-d476-40d9-bccd-a6d51513630a.png",
       "select_tags_to_describe_offer_(upto_5)": "F*CK Cancer, offer"
     },
-    "publicLink": "1hpkg0uBlEgEI3IzdSR5UMhHA08M9v2T8",
+    "publicLink": "http://dailybits.xyz/offer/1",
     "contact_information": {
       "name": "",
       "email": "",
@@ -24,6 +25,7 @@
   {
     "version": "0.0.6",
     "type_of_offer": "Second Opinion",
+    "offerId": "2",
     "partnerId": "1AQlR1uoh1IndtEd9e2zpzXB5I1JDSY_y",
     "choose_survey": {
       "title*_(20_words_max)": "Free Second Opinion on your Treatment",
@@ -34,7 +36,7 @@
       "header_image_(url)": "https://base-gl.s3.amazonaws.com/freessttJn/thumb/90a8e15e-d476-40d9-bccd-a6d51513630a.png",
       "select_tags_to_describe_offer_(upto_5)": "F*CK Cancer, offer"
     },
-    "publicLink": "1hpkg0uBlEgEI3IzdSR5UMhHA08M9v2T8",
+    "publicLink": "http://dailybits.xyz/offer/2",
     "contact_information": {
       "name": "",
       "email": "",
@@ -46,6 +48,7 @@
   {
     "version": "0.0.6",
     "type_of_offer": "Sign-up",
+    "offerId": "3",
     "partnerId": "1AQlR1uoh1IndtEd9e2zpzXB5I1JDSY_y",
     "choose_survey": {
       "title*_(20_words_max)": "No Cost Patient Navigation for those currently in treatment",
@@ -56,7 +59,7 @@
       "header_image_(url)": "https://base-gl.s3.amazonaws.com/freessttJn/thumb/90a8e15e-d476-40d9-bccd-a6d51513630a.png",
       "select_tags_to_describe_offer_(upto_5)": "F*CK Cancer, offer"
     },
-    "publicLink": "1hpkg0uBlEgEI3IzdSR5UMhHA08M9v2T8",
+    "publicLink": "http://dailybits.xyz/offer/3",
     "contact_information": {
       "name": "",
       "email": "",
@@ -68,6 +71,7 @@
   {
     "version": "0.0.6",
     "type_of_offer": "Registry",
+    "offerId": "4",
     "partnerId": "1hpkg0uBlEgEI3IzdSR5UMhHA08M9v2T8",
     "choose_survey": {
       "title*_(20_words_max)": "Join the BCO Registry!",
@@ -78,7 +82,7 @@
       "header_image_(url)": "https://base-gl.s3.amazonaws.com/freessttJn/thumb/90a8e15e-d476-40d9-bccd-a6d51513630a.png",
       "select_tags_to_describe_offer_(upto_5)": "Syngap Research Fund, offer"
     },
-    "publicLink": "1hpkg0uBlEgEI3IzdSR5UMhHA08M9v2T8",
+    "publicLink": "http://dailybits.xyz/offer/4",
     "contact_information": {
       "name": "",
       "email": "",
@@ -89,6 +93,7 @@
   },
   {
     "version": "0.0.6",
+    "offerId": "5",
     "type_of_offer": "Second Opinion",
     "partnerId": "1hpkg0uBlEgEI3IzdSR5UMhHA08M9v2T8",
     "choose_survey": {
@@ -100,7 +105,7 @@
       "header_image_(url)": "https://base-gl.s3.amazonaws.com/freessttJn/thumb/90a8e15e-d476-40d9-bccd-a6d51513630a.png",
       "select_tags_to_describe_offer_(upto_5)": "Syngap Research Fund, offer"
     },
-    "publicLink": "1hpkg0uBlEgEI3IzdSR5UMhHA08M9v2T8",
+    "publicLink": "http://dailybits.xyz/offer/5",
     "contact_information": {
       "name": "",
       "email": "",
@@ -112,6 +117,7 @@
   {
     "version": "0.0.6",
     "type_of_offer": "Sign-up",
+    "offerId": "6",
     "partnerId": "1hpkg0uBlEgEI3IzdSR5UMhHA08M9v2T8",
     "choose_survey": {
       "title*_(20_words_max)": "No Cost Patient Navigation for those currently in treatment",
@@ -122,7 +128,7 @@
       "header_image_(url)": "https://base-gl.s3.amazonaws.com/freessttJn/thumb/90a8e15e-d476-40d9-bccd-a6d51513630a.png",
       "select_tags_to_describe_offer_(upto_5)": "Syngap Research Fund, offer"
     },
-    "publicLink": "1hpkg0uBlEgEI3IzdSR5UMhHA08M9v2T8",
+    "publicLink": "http://dailybits.xyz/offer/6",
     "contact_information": {
       "name": "",
       "email": "",
