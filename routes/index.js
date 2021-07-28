@@ -83,9 +83,11 @@ router.get('/partner/:pid', async function (req, res, next) {
   try {
 
     let partner = await Partner.findOne({ partnerId: req.params.pid }).lean();
-    console.log(partner);
+    let offers = await Offer.find({ partnerId: req.params.pid }).lean();
+    let ud = Object.assign(partner, { offers: offers });
+    console.log("...offers.....", offers);
     if (partner)
-      res.render('partner', { partner })
+      res.render('partner', { partner: ud })
     else
       res.render('error', 'invalid partner')
 
