@@ -1,4 +1,3 @@
-
 html(lang='en')
   head
     meta(charset='utf-8')
@@ -207,32 +206,27 @@ html(lang='en')
               .row
                 .spacingcard.col.offset-md-1
                   div(style='position: absolute; top: 10px; z-index: 9001; padding: 10px;')
-                    a.btn.backbtn.btn-secondary.btn-sm(type='button' href="/" style='padding-top:10px;background-color: rgba(0, 0, 0, 0.5) !important; border: none !important; color: rgb(255, 255, 255) !important;')
+                    button.btn.backbtn.btn-secondary.btn-sm(type='button' style='background-color: rgba(0, 0, 0, 0.5) !important; border: none !important; color: rgb(255, 255, 255) !important;')
                       svg.bi-arrow-left.b-icon.bi(viewBox='0 0 16 16' width='1em' height='1em' focusable='false' role='img' aria-label='arrow left' xmlns='http://www.w3.org/2000/svg' fill='currentColor')
                         g
                           path(fill-rule='evenodd' d='M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z')
               .row
                 .spacingcard.singlesize.col-md-10.sm-12.offset-md-1
                   .card(style='border: none;')
-                    img.card-img-top(src='#{partner.orgCoverPhoto}' alt='#{partner.name}' style='min-height:300px;background:#fafafa;')
+                    img.card-img-top(src='https://base-gl.s3.amazonaws.com/freessttJn/thumb/35b90fb2-83e7-4134-bc2e-28f47aeca3cf.jpeg' alt='FOXG1 Research Foundation')
                     // 
                     .card-body
-                      h4.card-title=partner.name
+                      h4.card-title FOXG1 Research Foundation
                       // 
-                      p.card-text
-                        span=partner.category 
-                          |  @ 
-                        span=partner.city
-                          | , 
-                        span=partner.state 
+                      p.card-text  Advocacy @ Sands Point, NY 
                     // 
                     // 
                 .spacingcard.col-md-12.sm-12.offset-md-0
                   .custabs(style='padding-top: 20px;')
-                    #__BVID__31.tabs.contents.no-outline
+                    #__BVID__41.tabs.contents.no-outline
                       // 
                       div
-                        ul#__BVID__31__BV_tab_controls_.nav.nav-tabs.nav-fill(role='tablist')
+                        ul#__BVID__41__BV_tab_controls_.nav.nav-tabs.nav-fill(role='tablist')
                           // 
                           li.nav-item(role='presentation')
                             a#__BVID__42___BV_tab_button__.nav-link(role='tab' aria-selected='false' aria-setsize='3' aria-posinset='1' href='#' target='_self' aria-controls='__BVID__42' tabindex='-1') Overview
@@ -241,10 +235,10 @@ html(lang='en')
                           li.nav-item(role='presentation')
                             a#__BVID__46___BV_tab_button__.nav-link.active(role='tab' aria-selected='true' aria-setsize='3' aria-posinset='3' href='#' target='_self' aria-controls='__BVID__46') Offers
                           // 
-                      #__BVID__31__BV_tab_container_.tab-content.mt-3
-                        #__BVID__32.tab-pane.contentset.no-outline.active(role='tabpanel' aria-hidden='false' aria-labelledby='__BVID__32___BV_tab_button__' style='display: block;')
-                          p=partner.about
-                            
+                      #__BVID__41__BV_tab_container_.tab-content.mt-3
+                        #__BVID__42.tab-pane.contentset.no-outline(role='tabpanel' aria-hidden='true' aria-labelledby='__BVID__42___BV_tab_button__' style='display: none;')
+                          p
+                            | Promote research and education for the diagnosis, treatment and cure of FOXG1 Syndrome and to provide support to affected individuals and families.
                           // 
                           .list-group.listmap
                             .list-group-item.d-flex.align-items-center
@@ -252,14 +246,14 @@ html(lang='en')
                                 g(transform='translate(8 8) scale(1.3 1.3) translate(-8 -8)')
                                   path(d='M4.715 6.542L3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.001 1.001 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z')
                                   path(d='M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 0 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 0 0-4.243-4.243L6.586 4.672z')
-                              div=partner.websiteLink
+                              div  https://foxg1research.org/ 
                             .list-group-item.d-flex.align-items-center
                               svg.bi-geo-alt-fill.b-icon.bi.text-secondary(viewBox='0 0 16 16' width='1em' height='1em' focusable='false' role='img' aria-label='geo alt fill' xmlns='http://www.w3.org/2000/svg' fill='currentColor')
                                 g(transform='translate(8 8) scale(1.3 1.3) translate(-8 -8)')
                                   path(fill-rule='evenodd' d='M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z')
-                              span(style="min-width:300px")=partner.address
+                              |  One Luckenbach Lane, Sands Point, NY, 11050 
                               .gl-googlemap-container
-                                iframe.gl-googlemap-iframe(src='https://www.google.com/maps/embed/v1/place?key=AIzaSyCv8zbC7MFrupZUOoc-oJgSbvAJvACm8E4&q=#{partner.locationCoordinates}&zoom=8')
+                                iframe.gl-googlemap-iframe(src='https://www.google.com/maps/embed/v1/place?key=AIzaSyCv8zbC7MFrupZUOoc-oJgSbvAJvACm8E4&q=40.8551939,-73.69599&zoom=8')
                             // 
                             .list-group-item.d-flex.align-items-center
                               svg.bi-clock.b-icon.bi.text-secondary(viewBox='0 0 16 16' width='1em' height='1em' focusable='false' role='img' aria-label='clock' xmlns='http://www.w3.org/2000/svg' fill='currentColor')
@@ -271,9 +265,9 @@ html(lang='en')
                             button.btn.btn.btn-primary.btn-primary.btn-sm(type='button' style='height: 34px; width: 120px;')  Get Support 
                             img.barcode(src='https://marketplace.gluelabs.com/img/qr.22e87008.png')
                           .scancode  scan QR code to get more information 
-                        #__BVID__34.tab-pane.no-outline(role='tabpanel' aria-hidden='true' aria-labelledby='__BVID__34___BV_tab_button__' style='display: none;')
+                        #__BVID__44.tab-pane.no-outline(role='tabpanel' aria-hidden='true' aria-labelledby='__BVID__44___BV_tab_button__' style='display: none;')
                           div(style='text-align: center; padding-top: 50px; padding-bottom: 50px;')  No Articles 
-                        #__BVID__46.tab-pane.no-outline.active(role='tabpanel' aria-hidden='true' aria-labelledby='__BVID__46___BV_tab_button__' style='display:none')
+                        #__BVID__46.tab-pane.no-outline.active(role='tabpanel' aria-hidden='false' aria-labelledby='__BVID__46___BV_tab_button__' style='')
                           div(style='display: flex; flex-wrap: wrap;')
                             .offercards(data-v-30428d3c='' style='width: 100%;')
                               .nospace.autosize.less-margin--10.container(data-v-30428d3c='')
@@ -409,61 +403,3 @@ html(lang='en')
     script(src='https://marketplace.gluelabs.com/js/app~d0ae3f07.fd36e40a.js')
     script(src='https://marketplace.gluelabs.com/js/app~5a11b65b.e7e48dd1.js')
     script(src='https://marketplace.gluelabs.com/js/app~c714bc7b.da1f94db.js')
-    script.
-      //- document.getElementById('__BVID__42___BV_tab_button__').addEventListener('click',  enableTab('__BVID__32','__BVID__34','__BVID__46'))
-      //- document.getElementById('__BVID__44___BV_tab_button__').addEventListener('click',  enableTab('__BVID__34','__BVID__32','__BVID__46'))
-      //- document.getElementById('__BVID__44___BV_tab_button__').addEventListener('click',  enableTab('__BVID__46','__BVID__34','__BVID__32'))
-      //- function enableTab(tab1,tab2,tab3){
-      //-   alert(tab1);
-      //-   document.getElementById(tab1).style="display:block";
-      //-   document.getElementById(tab2).style="display:none";
-      //-   document.getElementById(tab3).style="display:none";
-      //- }
-
-
-//- extends layout
-
-//- block content
-//-   div(class="back") 
-//-     a(href='https://marketplace.gluelabs.com/') 
-//-       img(src="/images/icons8-home.svg" style="height:30px")
-//-   .card
-//-     img.card-img-top(src=partner.orgCoverPhoto style="background:blue;min-width:100%;min-height:300px;" )
-//-     div(style="width:100px;height:100px;border-radius:100px;position:absolute;top:100px;left:40px;background:#ccc;text-align:center;overflow:hidden;")
-//-       img(src=partner.profilePic style="width:100%;")
-//-     .card-body
-//-       h5.card-title=
-//-       p.card-text=  
-//-       p.card-text 
-//-         b Category : 
-//-         span=    
-//-       p.card-text
-//-         b Address : 
-//-         span=
-//-       p.card-text
-//-         b City : 
-//-         span=partner.city
-//-       p.card-text
-//-         b Website : 
-//-         span=
-//-       p.card-text
-//-         b State : 
-//-         span=partner.state
-//-       p.card-text
-//-         b Name : 
-//-         span=partner.name
-//-       p.card-text
-//-         b Coordinates : 
-//-         span=
-//-       p.card-text
-//-         b Bio : 
-//-         span=partner.orgBio
-//-       p.card-text
-//-         b Category : 
-//-         span=partner.orgCoverPhoto
-//-       p.card-text
-//-         b Phone : 
-//-         span=partner.partnerContactNo
-//-       p.card-text
-//-         b Email : 
-//-         span=partner.partnerEmail
