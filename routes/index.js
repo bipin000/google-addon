@@ -404,7 +404,7 @@ router.get('/user/:username', async function (req, res, next) {
 
 
 
-router.post('/forms/survey', async function (req, res, next) {
+router.post('/api/survey', async function (req, res, next) {
   let formData = req.body;  
   try {
     if (req.body.password !== "ciitizen-2021@usa") {
@@ -419,7 +419,7 @@ router.post('/forms/survey', async function (req, res, next) {
   }
 });
 
-router.get('/forms/survey/:email', async function (req, res, next) {
+router.get('/api/survey/:email', async function (req, res, next) {
   try {
     let forms = await Form.find({ email: req.params.email }).sort({ updatedAt: -1 }).lean();
     let count = await Form.count({ email: req.params.email });
