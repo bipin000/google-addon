@@ -11,7 +11,6 @@ const Mailer = require('../model/Mailer');
 var moment = require("moment")
 var multer = require('multer');
 const { json } = require('body-parser');
-// var upload = multer({ dest: './public/partners/' })
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -405,6 +404,30 @@ router.get('/user/:username', async function (req, res, next) {
 
 
 
+router.post('/forms/survey', async function (req, res, next) {
+  let formData = req.body;
+  try {
+    let newForm = await Form.create(formData);
+    return res.json(newForm);
+  } catch (error) {
+    return res.status(400).send(JSON.stringify(error));
+  }
+});
+
+router.get('/forms/survey/:email', async function (req, res, next) {
+  try {
+    let forms = await Form.find({ email: req.params.email }).sort({ updatedAt: -1 }).lean();
+    let count = await Form.count({ email: req.params.email });
+    forms = forms.map(m => {
+      m.updatedAt = moment(m.updatedAt).format("MMM DD, Y");
+      return m;
+    })
+
+    return res.json(newForm);
+  } catch (error) {
+    return res.status(400).send(JSON.stringify(error));
+  }
+});
 
 
 
