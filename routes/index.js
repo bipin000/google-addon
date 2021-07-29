@@ -405,7 +405,7 @@ router.get('/user/:username', async function (req, res, next) {
 
 
 router.post('/api/survey', async function (req, res, next) {
-  let formData = req.body;  
+  let formData = req.body;
   try {
     if (req.body.password !== "ciitizen-2021@usa") {
       throw ("Error Invalid Password");
@@ -421,14 +421,14 @@ router.post('/api/survey', async function (req, res, next) {
 
 router.get('/api/survey/:email', async function (req, res, next) {
   try {
-    let forms = await Form.find({ email: req.params.email }).sort({ updatedAt: -1 }).lean();
-    let count = await Form.count({ email: req.params.email });
+    let surveys = await Form.find({ email: req.params.email }).sort({ updatedAt: -1 }).lean();
+    let total = await Form.count({ email: req.params.email });
     forms = forms.map(m => {
       m.updatedAt = moment(m.updatedAt).format("MMM DD, Y");
       return m;
     })
 
-    return res.json(newForm);
+    return res.json({ total, surveys });
   } catch (error) {
     return res.status(400).send(JSON.stringify(error));
   }
