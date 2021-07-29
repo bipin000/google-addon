@@ -7,7 +7,8 @@ const schema = mongoose.Schema({
   formId: String,
   type: String,
   formViewUrl: String,
-  formEditUrl: String
+  formEditUrl: String,
+  email: String
 }, { timestamps: true })
 
 module.exports = mongoose.model("Form", schema)
