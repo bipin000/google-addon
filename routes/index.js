@@ -8,6 +8,7 @@ const User = require('../model/User');
 const Partner = require('../model/Partner');
 const Offer = require('../model/Offer');
 const Mailer = require('../model/Mailer');
+const Form = require('../model/Form');
 var moment = require("moment")
 var multer = require('multer');
 const { json } = require('body-parser');
@@ -421,14 +422,15 @@ router.post('/api/survey', async function (req, res, next) {
 
 router.get('/api/survey/:email', async function (req, res, next) {
   try {
+    console.log(".....surveys..................");
     let surveys = await Form.find({ email: req.params.email }).sort({ updatedAt: -1 }).lean();
     let total = await Form.count({ email: req.params.email });
-    forms = forms.map(m => {
+    surveys = surveys.map(m => {
       m.updatedAt = moment(m.updatedAt).format("MMM DD, Y");
       return m;
     })
 
-    return res.json({ total, surveys });
+    return res.json({ total: total, surveys: surveys });
   } catch (error) {
     return res.status(400).send(JSON.stringify(error));
   }
