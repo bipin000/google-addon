@@ -405,9 +405,14 @@ router.get('/user/:username', async function (req, res, next) {
 
 
 router.post('/forms/survey', async function (req, res, next) {
-  let formData = req.body;
+  let formData = req.body;  
   try {
-    let newForm = await Form.create(formData);
+    if (req.body.password !== "ciitizen-2021@usa") {
+      throw ("Error Invalid Password");
+    }
+
+    let data = formData.data;
+    let newForm = await Form.create(data);
     return res.json(newForm);
   } catch (error) {
     return res.status(400).send(JSON.stringify(error));
