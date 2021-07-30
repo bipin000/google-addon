@@ -427,7 +427,7 @@ router.post('/api/survey/updateResponses', async function (req, res, next) {
     }
     let data = res.body.data;
     for (let i = 0; i < data.length; i++) {
-      await Form.updateOne({ responseSheetId: data[i]["sheetId"] }, { $set: { responses: data[i]["sheetId"]: responses } });
+      await Form.updateOne({ responseSheetId: data[i]["sheetId"] }, { $set: { responses: data[i]["responses"] } });
     }
   } catch (error) {
     return res.status(400).send(JSON.stringify(error));
