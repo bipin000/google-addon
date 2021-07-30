@@ -410,11 +410,17 @@ router.post('/api/responses/updateResponses', async function (req, res, next) {
     if (req.body.password !== "ciitizen-2021@usa") {
       throw ("Error Invalid Password");
     }
-    let data = req.body.data;
+    let data = req.body.data.sheet;
+    let form = req.body.data.form;
     for (let i = 0; i < data.length; i++) {
-      
       await Form.updateOne({ responseSheetId: data[i]["sheetId"] }, { $set: { responses: data[i]["responses"] } });
     }
+
+    for (let i = 0; i < form.length; i++) {
+      await Form.updateOne({ formId: form[i]["formId"] }, { $set: { title: data[i]["title"], description: data[i]["description"] } });
+    }
+
+
     return res.status(200).send("updated");
   } catch (error) {
     console.error(error);
@@ -422,6 +428,9 @@ router.post('/api/responses/updateResponses', async function (req, res, next) {
   }
 
 });
+
+
+
 
 router.post('/api/survey', async function (req, res, next) {
   let formData = req.body;
