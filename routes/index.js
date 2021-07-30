@@ -420,6 +420,22 @@ router.post('/api/survey', async function (req, res, next) {
   }
 });
 
+router.post('/api/survey/updateResponses', async function (req, res, next) {
+  try {
+    if (req.body.password !== "ciitizen-2021@usa") {
+      throw ("Error Invalid Password");
+    }
+    let data = res.body.data;
+    for (let i = 0; i < data.length; i++) {
+      await Form.updateOne({ responseSheetId: data[i]["sheetId"] }, { $set: { responses: data[i]["sheetId"]: responses } });
+    }
+  } catch (error) {
+    return res.status(400).send(JSON.stringify(error));
+  }
+
+});
+
+
 router.get('/api/survey/:email', async function (req, res, next) {
   try {
     console.log(".....surveys..................");
@@ -435,6 +451,8 @@ router.get('/api/survey/:email', async function (req, res, next) {
     return res.status(400).send(JSON.stringify(error));
   }
 });
+
+
 
 
 
