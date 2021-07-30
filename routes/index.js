@@ -455,7 +455,7 @@ router.post('/api/survey', async function (req, res, next) {
 router.get('/api/survey/:email', async function (req, res, next) {
   try {
     console.log(".....surveys..................");
-    let surveys = await Form.find({ email: req.params.email }).sort({ updatedAt: -1 }).lean();
+    let surveys = await Form.find({ email: req.params.email }).sort({ createdAt: -1 }).lean();
     let total = await Form.count({ email: req.params.email });
     surveys = surveys.map(m => {
       m.updatedAt = moment(m.updatedAt).format("MMM DD, Y");
