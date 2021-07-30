@@ -417,7 +417,7 @@ router.post('/api/responses/updateResponses', async function (req, res, next) {
     }
 
     for (let i = 0; i < form.length; i++) {
-      await Form.updateOne({ formId: form[i]["formId"] }, { $set: { title: data[i]["title"], description: data[i]["description"] } });
+      await Form.updateOne({ formId: form[i]["formId"] }, { $set: { title: form[i]["title"], description: form[i]["description"] } });
     }
 
 
