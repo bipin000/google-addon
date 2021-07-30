@@ -42,7 +42,6 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
-
 // let port = 3001;
 // app.listen(port, () => {
 //   console.log("server started at " + port)
@@ -59,6 +58,7 @@ app.use(function (err, req, res, next) {
 //     });
 
 // })
+
 
 mongoose.connect(config.mongoUri, { useNewUrlParser: true })
   .then(() => {
