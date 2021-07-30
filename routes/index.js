@@ -405,16 +405,19 @@ router.get('/user/:username', async function (req, res, next) {
 });
 
 router.post('/api/responses/updateResponses', async function (req, res, next) {
+  console.log(req.body);
   try {
     if (req.body.password !== "ciitizen-2021@usa") {
       throw ("Error Invalid Password");
     }
     let data = req.body.data;
     for (let i = 0; i < data.length; i++) {
+      
       await Form.updateOne({ responseSheetId: data[i]["sheetId"] }, { $set: { responses: data[i]["responses"] } });
     }
     return res.status(200).send("updated");
   } catch (error) {
+    console.error(error);
     return res.status(400).send(JSON.stringify(error));
   }
 
