@@ -12,6 +12,7 @@ const Form = require('../model/Form');
 var moment = require("moment")
 var multer = require('multer');
 const { json } = require('body-parser');
+const { send } = require('process');
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -404,15 +405,15 @@ router.get('/user/:username', async function (req, res, next) {
 });
 
 router.post('/api/responses/updateResponses', async function (req, res, next) {
-  console.log("asssss");
   try {
     if (req.body.password !== "ciitizen-2021@usa") {
       throw ("Error Invalid Password");
     }
-    let data = res.body.data;
+    let data = req.body.data;
     for (let i = 0; i < data.length; i++) {
       await Form.updateOne({ responseSheetId: data[i]["sheetId"] }, { $set: { responses: data[i]["responses"] } });
     }
+    return res.status(200).send("updated");
   } catch (error) {
     return res.status(400).send(JSON.stringify(error));
   }
